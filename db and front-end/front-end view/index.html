@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    
+    <title>Maxihomes</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">  
+    <!-- Animate CSS -->
+    <link href="vendors/animate/animate.min.css" rel="stylesheet">
+    <!-- Icon CSS-->
+	<link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="vendors/linearicons/Linearicons.css">   
+    <!-- Slider CSS-->
+	<link rel="stylesheet" href="vendors/slider/css/slider.1.0.css">   
+    <!-- Owl Carousel CSS-->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">    
+	<link rel="stylesheet" href="css/owl.carousel.css">    
+	<link rel="stylesheet" href="css/owl.theme.default.css">       
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">      
+	<link rel="stylesheet" href="css/owl.theme.green.min.css">   
+	<link rel="stylesheet" href="css/owl.theme.green.css"> 
+    
+    <!--Theme Styles CSS-->
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all" /> 
+	<link rel="stylesheet" type="text/css" href="css/custom.css" media="all" />
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader"></div>
+    
+   <!-- Header Area-->
+    <nav class="navbar navbar-default header_area">
+        <div class="container-fluid p0">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header_collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="images/logo.png" width="80px" alt=""></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="header_collapse">
+                <ul class="nav navbar-nav navbar_menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about-us-link">About</a></li>
+                    <li
+                    onmouseleave="closeNav()"
+                    ><a href="#" onmouseover="openNav()">Projects</a>
+                    
+                        <div id="myNav" class="overlay">
+                            <div class="overlay-content">
+                                <h3>Our Projects</h3>
+                                <br>
+                                <br>
+                              <a href="rooms.html">Bandar Sunway<br>
+                                  <span class="city">Subang Jaya</span>
+                              </a>
+                              <br><br>
+                              <a href="rooms.html">Glenmarie
+                                  <br><span class="city">Shah Alam</span>
+                              </a>
+                            </div>
+                          </div>
+                    </li> 
+                   
+                    <li><a href="index.html#contact-link">Contact Us</a></li>  
+                   
+                </ul> 
+                <ul class="nav navbar-nav navbar_menu pull-right">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>  
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>  
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>   
+                </ul> 
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+  
+    </nav> 
+
+    
+
+      
+    <!--End Header Area-->
+    
+    <!-- Slider Area -->
+    <section class="slide-wrapper">
+        <div class="container">
+            <div id="myCarousel" class="carousel slide">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                 </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item item1 active">
+                        <div class="fill">  
+                            <div class="inner-content">
+                                <div class="carousel-img">
+                                    
+                                </div>
+                                <div class="carousel-desc"> 
+                                    <h4></h4>
+                                    <h2>Maxihomes</h2>
+                                    <!-- <a href="#contact-link">Contact Now</a>  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item2 ">
+                    <div class="fill">  
+                        <div class="inner-content">
+                            <div class="carousel-img">
+                                
+                            </div>
+                            <div class="carousel-desc"> 
+                                <h4></h4>
+                                <h2></h2>
+                                <!-- <a href="#contact-link">Contact Now</a>  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <!-- End Slider Area -->
+    
+    <!-- Welcome to EVO Area -->
+    <section class="welcome_to_evo" id="about-us-link">
+        <div class="container">
+            <div class="provide_qualty row m0">
+                <div class="col-md-12 p0 provide_qualty_content">
+                    <h6>Our Projects</h6>
+                 <br><br>
+                    <div id="multi_slider" class="owl-carousel  owl-theme">
+                        <a href="rooms.html">
+                        <div class="item slider_gallery_item">
+                            <img src="images/slide_1.jpg">
+                            <div class="overlay">
+                                <h3>Bandar Sunway</h3>
+                            </div>
+                        </div>
+                        </a>
+                        <a href="rooms.html">
+                        <div class="item slider_gallery_item"><img src="images/slide_2.jpg">
+                            <div class="overlay">
+                                <h3>Glenmarie</h3>
+                            </div>
+                        </div>
+                        </a>
+                        <a href="rooms.html">
+                        <div class="item slider_gallery_item"><img src="images/slide_3.jpg">
+                            <div class="overlay">
+                                    <h3>Bandar Sunway</h3>
+                                </div>
+                        </div>
+                        </a>
+                        <a href="rooms.html">
+                        <div class="item slider_gallery_item"><img src="images/slide_4.jpg">
+                            <div class="overlay">
+                                    <h3>Glenmarie</h3>
+                                </div>
+                        </div>
+                        </a>
+                        <a href="rooms.html">
+                        <div class="item slider_gallery_item"><img src="images/slide_5.jpg">
+                            <div class="overlay">
+                                    <h3>Bandar Sunway</h3>
+                                </div>
+                        </div>
+                        </a>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Welcome to EVO Area -->
+    
+    <!-- section news -->
+
+    <section class="news">
+        <h2 class="title">Events and Happenings</h2>
+        <div class="row news_item">
+            <div class="col-md-6 noPad">
+                <img src="images/sunway.jpg" class='full_width'>
+            </div>
+            <div class="col-md-6 news_details">
+                 <h3>Rated Number 1 Choice by Sunway Students</h3>
+                 <P>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        
+                        </P>
+            </div>
+        </div>
+        <div class="row news_item">
+                
+            <div class="col-md-6 news_details">
+                    <h3>Grand Opening in Mont Kiara</h3>
+                    <P>We are expanding ! "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        
+                        </P>
+            </div>
+            <div class="col-md-6 noPad">
+                    <img src="images/ribbon.jpg" class='full_width'>
+                </div>
+        </div>
+        <div class="row news_item">
+                <div class="col-md-6 noPad">
+                    <img src="images/prop.jpg" class='full_width'>
+                </div>
+                <div class="col-md-6 news_details">
+                     <h3>How to find the most suitable accommodation for you</h3>
+                     <P>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            
+                            </P>
+                </div>
+            </div>
+
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="btn_custom">
+                    Read More
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- latest Project area --> 
+    <section class="projects">
+        <h2 class="title">
+            Find A Room Today
+        </h2>
+        <div class="row project_row">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 noPad ">
+                <img src="images/g-2.png" class="full_width">
+            </div>
+            <div class="col-md-5">
+                <h3>Bandar Sunway</h3>
+                <p>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        
+                        
+                </p>
+                <br><br>
+                <a class="rooms btn_custom white" href="rooms.html">View Rooms</a>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        
+        <div class="row project_row">
+            
+        <div class="col-md-1"></div>
+        <div class="col-md-5 noPad ">
+                <img src="images/g-1.png" class="full_width">
+            </div>
+                <div class="col-md-5">
+                    <h3>Glenmarie Shah Alam</h3>
+                    <p>
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            
+                            
+                    </p>
+                    <br><br>
+                    <a class="rooms btn_custom white" href="rooms.html">View Rooms</a>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            
+    </section>
+    <!-- End latest Project area --> 
+ 
+    
+    
+    <!-- Client Logo 
+    <section class="client_logo_area">
+        <div class="container">
+            <div class="row">
+                <div class="client_logo owl-carousel">
+                    <div class="item"><img src="images/client-logo-1.png" alt=""></div>
+                    <div class="item"><img src="images/client-logo-2.png" alt=""></div>
+                    <div class="item"><img src="images/client-logo-3.png" alt=""></div>
+                    <div class="item"><img src="images/client-logo-4.png" alt=""></div>
+                    <div class="item"><img src="images/client-logo-1.png" alt=""></div>
+                    <div class="item"><img src="images/client-logo-4.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+     End Client Logo --> 
+
+     <!-- contact area -->
+     <!-- Contact area --> 
+    <section class="news" id="contact-link">
+        <div class="container">
+            <div class="row contact_row">
+                <div class="col-sm-12 send_message">
+                    <h2>Can't find what you are looking for ?</h2>
+                    <p>Drop by our office today</p> 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.097741263127!2d101.5998893151015!3d3.068548354497751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4c8f2e63151d%3A0xfbdf9e70b8572d54!2sRock+Cafe!5e0!3m2!1sen!2smy!4v1514704193615" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Map area --> 
+     <!-- end contact area -->
+    
+    <!-- Footer Area --> 
+    <footer class="footer_area">
+        <div class="container">
+            <div class="row m0 foter_row">
+                <div class="col-sm-2 footer_logo p0"><img src="images/logo.png" width="150px" alt=""></div>
+                <div class="col-md-8 col-sm-10 footer_menu"> 
+                        <ul class="nav navbar_menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#about-us-link">About Us</a></li>
+                            <li><a href="index.html#contact-link">Contacts</a></li>  
+                        </ul>
+                    </div>         
+                <div class="col-md-2 col-sm-12 footer_menu"> 
+                    <ul class="nav navbar_menu socail_nav">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>  
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>  
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>    
+                    </ul>
+                </div>
+            </div>
+            <div class="copy_right_area row m0">
+                <ul class="privacy">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+                <h5>All Right Reserved &copy; 2017 <a href="#">Maxihomes.co</a></h5> 
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Area --> 
+    
+    <!-- jQuery JS -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+   
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- slider JS --> 
+    <script src="vendors/slider/js/slider.1.0.js"></script>
+    <!-- Animate JS --> 
+    <script src="vendors/animate/wow.min.js"></script>
+    <!-- Counter-Up JS --> 
+    <script src="vendors/Counter-Up/waypoints.min.js"></script> 
+    <script src="vendors/Counter-Up/jquery.counterup.min.js"></script> 
+    <!-- Mixitup JS --> 
+    <script src="vendors/mixitup/jquery.mixitup.min.js"></script>    
+    <!-- Owl Carousel JS --> 
+    <script src="vendors/owl_carousel/owl.carousel.min.js"></script>  
+    <!-- Theme JS -->
+    <script src="js/theme.js"></script>
+    <script>
+            
+                    $(document).ready(function(){
+                        $("#multi_slider").owlCarousel({
+                            loop:true,
+                            margin:10,
+                            nav:true,
+                            
+                        });
+                    });
+                    function openNav() {
+                    
+                        document.getElementById("myNav").style.height = "60vh";
+                    }
+                    
+                    function closeNav() {
+                      
+                        document.getElementById("myNav").style.height = "0px";
+                    }
+                    </script>
+</body>
+</html> 

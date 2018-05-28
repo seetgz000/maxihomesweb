@@ -1,0 +1,89 @@
+.contact_area{
+    padding: 200px 0; 
+    iframe{
+        width: 100%;
+        height: 480px;
+        border: 0;
+    }
+    .contact_row{
+        padding-top: 115px;
+        .send_message{
+            padding-right: 85px;
+            h2{
+                font: 700 42px/1 $mon;
+                color: #000;
+            }
+            p{
+                font: 400 15px/30px $pop;
+                color: #000;
+                opacity: .65;
+                padding-top: 30px;
+            }
+            .contact-form{
+                padding-top: 35px;
+                .contactform{
+                    .form-group{
+                        margin-bottom: 30px; 
+                        .form-control{
+                            border: 1px solid #efefef;
+                            border-radius: 0;
+                            background: #f9f9f9;
+                            font: 400 15px/55px $pop;
+                            padding: 0;
+                            padding-left: 25px;
+                            height: auto;
+                            box-shadow: none;
+                        }
+                        textarea{
+                            height: 180px !important;
+                            line-height: normal !important;
+                            padding-top: 25px !important;
+                            resize: none;
+                        }
+                        &.has-error{
+                            .form-control{
+                                border-color: red;
+                            }
+                        }
+                    }
+                    .btn-block{
+                        width: 100%;
+                        border-radius: 0;
+                        padding: 0;
+                        line-height: 55px;
+                        @extend .send_button;
+                    }
+                }
+            }
+        }
+        .contact_info{
+            padding-left: 55px;
+            h2{
+                font: 700 42px/1 $mon;
+                color: #000;
+            }
+            h6{
+                text-transform: uppercase;
+                font: 400 14px/1 $mon;
+                color: #000;
+                opacity: .50;
+                letter-spacing: .30px;
+                padding-bottom: 5px;
+                padding-top:45px;
+            }
+            a{
+                font: 400 16px/32px $pop;
+                color: #000;
+                display: block;
+                padding-bottom: 5px;
+                 &:hover, &:focus{
+                    color: $hover; 
+                }
+            }
+            address{
+                font: 400 16px/32px $pop;
+                color: #000;
+            }
+        }
+    }
+}

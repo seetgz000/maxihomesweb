@@ -1,0 +1,98 @@
+.single_blog_area{
+    padding-top: 200px;
+    padding-bottom: 150px;
+    .single_blog_row{
+        img{
+            max-width: 100%;
+        }
+        .news_blog{ 
+            padding-top: 65px;
+            .date_blog{
+                font: 500 15px/1 $mon;
+                color: #c5c3c3;
+                text-transform: uppercase;
+                padding-bottom: 20px;
+                display: block;
+            }
+            h2{
+                font: 700 36px/48px $pop;
+                color: #000;
+                max-width: 680px;  
+                padding-bottom: 50px;
+            }
+            p{
+                font: 400 15px/30px $pop;
+                color: #000;
+                opacity: .65;
+                padding-bottom: 30px;
+            }
+            .jhone_doe{
+                font: 300 36px/55px $pop;
+                color: #000;
+                max-width: 910px;
+                margin: 0 auto;
+                position: relative;
+                padding-left: 47px;
+                margin-top: 30px;
+                margin-bottom: 70px;
+                a{
+                    color: $hover;
+                }
+                &:before{
+                    content:"";
+                    position: absolute;
+                    left: 0;
+                    top: 13px;
+                    background: $hover;
+                    width: 4px;
+                    bottom: 15px;
+                }
+            }
+            .freatures_images{
+                .featur_content{ 
+                    margin: 0;
+                    padding-left: 15px;
+                    display: block;
+                    overflow: hidden;
+                    padding-right: 15px;
+                    .bold_para{
+                        font: 500 18px/30px $pop;
+                        color: #000;
+                        opacity: 1;
+                        padding-top: 70px;
+                    } 
+                    h4{
+                        font: 500 15px/30px $pop;
+                        color: #000;
+                        padding-top: 20px;
+                        display: inline-block;
+                        small{
+                            font: 400 15px/30px $pop;
+                            color: #000;
+                            opacity: .65;
+                        }
+                    }
+                    .socail_share{
+                        float: right;
+                        padding-top: 20px;
+                        li{
+                            display: inline-block;
+                            a{
+                                font-size: 14px;
+                                color: #dbdbdb;
+                                padding-left: 15px;
+                                &:hover, &:focus{
+                                    color: $hover;
+                                }
+                            }
+                            &.share{
+                                font: 500 15px/30px $pop;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 

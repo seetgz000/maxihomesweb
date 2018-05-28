@@ -1,0 +1,55 @@
+.pages_banner_area{
+    background: url("../images/about_bg.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background: rgba(0, 0, 0, 0.75);
+        z-index: -1;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        background: url("../images/about_bg_shap.png") no-repeat center;
+        background-size: cover;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 440px;
+        width: 580px;
+        display: block;
+        z-index: -1;
+    }
+    .about_pages{
+        text-align: center;
+        padding-top: 240px;
+        padding-bottom: 140px;
+        h2{
+            font: 800 60px/1 $mon;
+            color: #fff;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+        }
+        .breadcrumb{
+            background-color: transparent;
+            li{
+                a{
+                    color: #fff;
+                    font: 400 18px/1 $pop;
+                }
+                &.active{
+                    color: $hover;
+                    font: 400 18px/1 $pop;
+                }
+            }
+        }
+    }
+}  

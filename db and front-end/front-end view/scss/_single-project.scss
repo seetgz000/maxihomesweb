@@ -1,0 +1,60 @@
+.single_project_area{
+    padding: 200px 0; 
+    .single_project_row{
+        img{
+            max-width: 100%;
+        }
+        .blue_heaven{
+            padding-top: 90px;
+            padding-bottom: 60px;
+            .Blue_heading{
+                font: 600 36px/45px $pop;
+                color: #000;
+                text-align: right;
+                padding-right: 75px;
+            }
+            .date_col{
+                h5{
+                    font: 500 18px/1 $mon;
+                    color: #000;
+                    text-transform: uppercase;
+                }
+                h6{
+                    font: 400 18px/1 $pop;
+                    color: #b2b2b2;
+                    padding-top: 17px;
+                }
+            }
+        }
+        p{
+            font: 400 15px/30px $pop;
+            color: #000;
+            opacity: .65;
+        }
+        .bold_para{
+            font: 500 16px/32px $pop;
+            color: #000; 
+            opacity: 1;
+            padding-bottom: 40px;
+        }
+        .prev_next{
+            display: block;
+            padding-top: 60px;
+            li{
+                display: inline-block;
+                a{
+                    font-size: 14px;
+                    border-color: #000; 
+                    &:hover, &:focus{
+                        color: $hover;
+                        border-color: $hover;
+                    }
+                    
+                }
+                & + li{
+                    float: right;
+                }
+            }
+        }
+    }
+}

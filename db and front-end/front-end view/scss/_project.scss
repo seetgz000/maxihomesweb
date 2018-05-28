@@ -1,0 +1,128 @@
+.latest_project_area{
+    padding: 100px 0;
+    .gallery_row{
+        h2{
+            font: 700 42px/1 $mon;
+            color: #000;
+            text-transform: uppercase;
+            padding-bottom: 45px;
+        }
+        .tabs{
+            li{
+                display: inline-block;
+                a{
+                    font: 600 14px/30px $mon;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    padding: 0 20px;
+                    border: 2px solid transparent;
+                    border-radius: 30px;
+                    color: #000;
+                    &:hover, &:focus{
+                        color: $hover;
+                        border: 2px solid $hover;
+                    }
+                }
+                &.current{
+                    a{
+                        border-color: $hover;
+                        color: $hover;
+                    }
+                }
+            }
+        }
+        .view_project{
+            a{
+                font: 500 15px/35px $mon;
+                border-bottom: 2px solid $hover;
+                color: #000;
+                text-transform: uppercase;
+                letter-spacing: .5px;
+                display: inline-block;
+                float: right;
+                &:hover, &:focus{
+                    color: $hover;
+                    border-color: $hover;
+                }
+            }
+        } 
+    }
+    .gallery_item{
+        padding-top: 80px;
+        .tab_content{
+            .tabs_item{
+                cursor: url(../images/cursor.png), auto; 
+                .owl-item{
+                    opacity: .10; 
+                    .market_content{
+                        display: none;
+                    }
+                }
+                .owl-item.center{
+                    opacity: 1;
+                    position: relative;
+                    z-index: 2;
+                    .market_content{
+                        display: block;
+                    }
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        display: block;
+                        background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 100%);
+                        background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 100%);
+                        background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 100%);
+                        opacity: 0.788;
+                        z-index: 1;
+                    }
+                }
+                .item{
+                    position: relative;
+                    img{
+                        max-width: 100%; 
+                    }
+                    .market_content{
+                        position: absolute;
+                        left: 80px;
+                        bottom: 70px;
+                        z-index: 3;
+                        cursor: auto;
+                        h6{
+                            color: #fff;
+                            text-transform: uppercase;
+                            font: 500 15px $mon;
+                            padding-bottom: 18px;
+                        }
+                        a{
+                            color: #fff;
+                            font: 600 28px/36px $pop;
+                            &:hover, &:focus{
+                                color: $hover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .no-js .owl-carousel, .owl-carousel.owl-loaded{
+        display: none;
+    }
+    .tabs_item {
+      display: none;
+      padding: 30px 0;
+    } 
+    .tabs_item:first-child {
+      display: block;
+    } 
+}
+/* project_area_2 */
+.project_area_2{
+    padding-top: 200px;
+    padding-bottom: 140px;
+}
+ 

@@ -1,0 +1,102 @@
+.welcome_to_evo{ 
+    padding-top: 168px;
+    display: block;
+    overflow: hidden;
+    padding-bottom: 135px;
+    .provide_qualty{
+        .provide_qualty_content{
+            h6{
+                font: 300 20px/1 $pop;
+                color: #000;
+                opacity: .5;
+                text-transform: uppercase;
+                letter-spacing: .30px;
+            }
+            h2{
+                font:700 48px/60px $mon;
+                color: #000;
+                position: relative;
+                margin-bottom: 20px;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    width: 185px;
+                    height: 3px;
+                    background: #000;
+                    bottom: 22px;
+                    right: 40px;
+                }
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 52px;
+                    height: 2px;
+                    background: $hover;
+                    bottom: -24px;
+                    left: 0px;
+                }
+            }
+            h4{
+                font: 600 36px/46px $pop;
+                color: #000;
+                padding-top: 65px;
+            }
+            p{
+                font: 400 15px/30px $pop;
+                color: #000;
+                opacity: .65;
+                padding: 55px 0 45px;
+            }
+            .more_btn{
+                font: 500 15px/35px $mon;
+                border-bottom: 2px solid #000;
+                color: #000;
+                text-transform: uppercase;
+                letter-spacing: .5px;
+                display: inline-block;
+                &:hover, &:focus{
+                    color: $hover;
+                    border-color: $hover;
+                }
+            }
+        }
+        .provide_images{
+            float:  right; 
+            position: relative;
+            max-width: 502px;
+            @include transition;
+            cursor: pointer;
+            &:after{
+                content: "";
+                position: absolute;
+                right: -70px;
+                top: -70px;
+                border: 10px solid rgba(0, 0, 0, 0.051);
+                display: block;
+                width: 100%;
+                height: 100%;
+                @include transition;
+                z-index: -1;
+            }
+            .imagese{
+                max-width: 100%;
+                position: relative;
+                &:before{
+                    content: "";
+                    background: #000;
+                    height: 20px;
+                    width: 10px;
+                }
+            }
+        } 
+        &:hover, &:focus{
+            .provide_images{
+                &:after{
+                    right: 0;
+                    top: 0;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}  

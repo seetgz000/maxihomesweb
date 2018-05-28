@@ -1,0 +1,63 @@
+.client_love_work{
+    background: #222222;
+    margin: 0 40px;
+    padding: 120px 0;
+    display: block;
+    overflow: hidden;
+    .client_love_row{
+//        max-width: 830px;
+        margin: 0 auto;
+        h2{
+            color: #fff;
+            font: 700 48px/1 $mon;
+            display: block;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding-bottom: 50px;
+            &:after{
+                content: "";
+                position: absolute;    
+                background: url("../images/quote.png") no-repeat;
+                width: 106px;
+                height: 90px;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                top: -20px;
+                opacity: 0.2;
+                z-index: -1;
+            }
+        }
+        .client_slider{
+            padding-top: 10px;
+            .item{
+                text-align: center;
+                
+                p{
+                    font: 300 28px/50px $pop;
+                    color: #fff;
+                    text-align: center; 
+                }
+                .client_name{ 
+                    padding-top: 50px;
+                    img{
+                        width: auto;
+                    }
+                    
+                    h4{
+                        font: 500 15px/1 $mon;
+                        color: #fff;
+                        text-transform: uppercase;
+                        padding-top: 28px;
+                    }
+                    h6{
+                        font: 300 15px/1 $pop;
+                        color: $hover;
+                        padding-top: 12px;
+                    }
+                }
+            }
+        }   
+    }
+} 

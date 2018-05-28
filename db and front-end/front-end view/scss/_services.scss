@@ -1,0 +1,169 @@
+.our_services_area{
+    padding-bottom: 180px;
+    .our_services_row{
+        .interior{
+            margin-top: 100px;
+            background: url("../images/background.png");
+            display: block;
+            overflow: hidden;
+            .interior_img{
+                padding-left: 0;
+                img{
+                    max-width: 100%;
+                    margin-bottom: 1px;
+                }
+            }
+            .interior_content{
+                padding-top: 70px;
+                padding-left: 50px;
+                h5{
+                    font: 400 15px/1 $mon;
+                    color: $hover;
+                    position: relative;
+                    text-transform: uppercase;
+                    letter-spacing: .50px;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        left: -240px;
+                        top: 7px;
+                        background: $hover;
+                        width: 226px;
+                        height: 1px;
+                        z-index: 1;
+                    }
+                }
+                h3{
+                    font: 700 48px/55px $mon;
+                    color: #000;
+                    padding-top: 20px;
+                }
+                p{
+                    font: 400 15px/30px $pop;
+                    color: #000;
+                    opacity: .65; 
+                    padding: 30px 30px 20px 70px;
+                }  
+                a{
+                    margin-left: 70px;
+                    border-color: #000;
+                    &:hover, &:focus{ 
+                        border-color: $hover;
+                    }
+                }
+            }
+        }
+        .interior_right{
+            text-align: right;
+            .interior_img{
+                padding-left: 15px;
+                padding-right: 0;
+            }
+            .interior_content{
+                padding-left: 0;
+                padding-right: 50px;
+                h5{ 
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        right: -240px;
+                        left: auto;
+                        top: 7px;
+                        background: $hover;
+                        width: 226px;
+                        height: 1px;
+                        z-index: 1;
+                    }
+                }
+                p{
+                    padding-left: 30px;
+                    padding-right: 70px;
+                }
+                a{
+                    margin-left: 0;
+                    margin-right: 70px;
+                }
+            }
+        }
+    }
+} 
+
+/* About Pages */
+.service_about{
+    padding-top: 200px;
+    padding-bottom: 100px;
+    .service_about_row{
+        .provide_great{
+            img{
+                max-width: 100%;
+            }
+             h6{
+                font: 300 20px/1 $pop;
+                color: #000;
+                opacity: .5;
+                text-transform: uppercase;
+                letter-spacing: .30px;
+                 padding-top: 120px;
+                 padding-bottom: 20px;
+            }
+            h2{
+                font:700 47px/60px $mon;
+                color: #000;
+                position: relative;
+                margin-bottom: 20px;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    width: 185px;
+                    height: 3px;
+                    background: #000;
+                    bottom: 22px;
+                    right: 40px;
+                }
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 52px;
+                    height: 2px;
+                    background: $hover;
+                    bottom: -24px;
+                    left: 0px;
+                }
+            } 
+            p{
+                font: 400 15px/30px $pop;
+                color: #000;
+                opacity: .65;
+                padding: 55px 0 45px;
+            }
+            .small_sc{
+                @media (min-width:991px){
+                    display: none;
+                } 
+            }
+        }
+        .provide_great_bottom{
+            padding-left: 50px;
+            h6{
+                padding-top: 0;
+            }
+            h2{
+                &:before{
+                    right: 0;
+                }
+            }
+            p{
+                padding-bottom: 105px;
+            }
+            .lg_screen{
+                @media (max-width:991px){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.our_services_area_2{
+    padding-top: 70px; 
+}

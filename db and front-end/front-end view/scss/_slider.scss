@@ -1,0 +1,120 @@
+.slide-wrapper{
+    height: 100vh;
+    width: 100%;
+    display: block;
+    #myCarousel{
+        .carousel-inner{
+            .item{
+                .fill{
+                    padding: 0;
+                    background: url(../images/slider-1.jpg) no-repeat center;  
+                    background-size: cover;
+                    position: relative;
+                    z-index: 1;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        display: block;
+                        background-color: rgba(0, 0, 0, .50);
+                        z-index: -1;
+                    } 
+                    .inner-content{
+                        .carousel-desc{
+                            h4{
+                                font: 400 20px/1 $pop;
+                                color: #fff;
+                                text-transform: uppercase;
+                                letter-spacing: 1px;
+                                padding-bottom: 40px;
+                            }
+                            h2{
+                                font: 800 60px/1 $pop;
+                                color: #fff;
+                                text-transform: uppercase;
+                                letter-spacing: .39px;
+                                padding-bottom: 55px;
+                            }
+                            a{
+                                font: 500 14px/55px $mon;
+                                width: 180px;
+                                text-align: center;
+                                color: #fff;
+                                background: $hover;
+                                display: block;
+                                margin: 0 auto;
+                                text-transform: uppercase;
+                                letter-spacing: .50px;
+                                position: relative;
+                                &:before{
+                                    width: 100%; 
+                                    height: 100%;
+                                    content: "";
+                                    background: #ffffff;
+                                    transition: all 0.5s ease;
+                                    -webkit-transition: all 0.5s ease;
+                                    -ms-transition: all 0.5s ease;
+                                    -moz-transition: all 0.5s ease;
+                                    position: absolute;
+                                    z-index: 1;
+                                    top: 0;
+                                    left: 0;
+                                    opacity: 0;
+                                }
+                                &:after{
+                                    width: 100%;
+                                    height: 100%;
+                                    content: "";
+                                    background: #ffffff;
+                                    opacity: 0;
+                                    transition: all 0.5s ease;
+                                    -webkit-transition: all 0.5s ease;
+                                    -ms-transition: all 0.5s ease;
+                                    -moz-transition: all 0.5s ease;
+                                    position: absolute;
+                                    z-index: 1;
+                                    top: 0;
+                                    left: 0;
+                                }
+                                &:hover, &:focus{
+                                    &:before{
+                                        left: 50%;
+                                        width: 0;
+                                        opacity: 0.5;
+                                    }
+                                    &:after{
+                                        top: 50%;
+                                        height: 0;
+                                        opacity: 0.5;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .item2 .fill{
+                background: url(../images/slider-2.jpg) no-repeat center;
+                background-size: cover;
+            }
+            .item3 .fill{
+                background: url(../images/slider-3.jpg) no-repeat center;
+                background-size: cover;
+                .inner-content .carousel-desc{
+                    padding-left: 320px;
+                    h2{
+                        line-height: 80px; 
+                        padding-bottom: 30px;
+                    }
+                    a{
+                        margin: 0;
+                    }
+                } 
+            }
+        }
+    }
+}
+ 

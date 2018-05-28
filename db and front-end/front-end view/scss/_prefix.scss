@@ -1,0 +1,74 @@
+/*Prefix Styles*/
+.m0{margin: 0;}
+.p0{padding: 0;}
+
+body{
+	font-family: $mon;
+    h1,h2,h3,h4,h5,h6{
+        margin: 0;
+    }
+	p{
+		font-family: $pop;
+		line-height: 25px;
+		color: $p;
+        margin: 0;
+	}
+    ul{
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    } 
+	/*Section Fix*/
+	section, header, footer{
+		&.row{            
+			margin: 0; 
+		}
+	} 
+}
+/*Ancore*/
+a,.btn,button{
+    outline: none;
+    @include transition;
+    &:before,&:after{
+        @include transition;
+    }
+    &:focus,&:hover{  
+        outline: none;
+        text-decoration: none;
+        @include transition; 
+    }
+} 
+
+// Tittle
+.tittle{
+    h2{
+        color: #000;
+        font: 700 42px/1 $mon;
+    }
+    h6{
+        font: 400 17px/28px $mon;
+        color: #000;
+        opacity: .90;
+        padding-top: 20px;
+    }
+    a{ 
+        float: right;
+        margin-top: -40px;
+        position: relative;
+        z-index: 1; 
+    }
+}
+
+// Button style 
+.btn_defult{
+    font: 500 15px/35px $mon;
+    border-bottom: 2px solid $hover;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    display: inline-block; 
+    &:hover, &:focus{
+        color: $hover;
+        border-color: $hover;
+    }
+}

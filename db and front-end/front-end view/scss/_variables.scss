@@ -1,0 +1,42 @@
+// Variables
+
+//Fonts 
+$mon:'Montserrat', sans-serif;
+$pop:'Poppins', sans-serif; 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800|Poppins:300,400,500,600,700');
+
+/*Color Variables*/  
+$p: #151515;
+$hover: #d6ad34; 
+
+// Mixins
+@mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay; 
+}
+
+// Placeholder Mixins 
+@mixin placeholder {
+    &.placeholder { @content }
+    &:-moz-placeholder { @content }
+    &::-webkit-input-placeholder { @content }
+}
+
+// Selection Color
+::selection{
+	background-color: $hover;
+    color: #FFFFFF;
+} 
+
+/* Preloader */ 
+.preloader{
+    position:fixed;
+    left:0px; 
+    top:0px;
+    width:100%;
+    height:100%;
+    z-index:999999;
+    background-color:#ffffff;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-image:url("../images/preloader.svg");
+}

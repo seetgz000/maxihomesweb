@@ -1,0 +1,178 @@
+/* filters_row */
+.filters_row{
+    padding-top: 200px;
+    padding-bottom: 115px;
+    #projects_filters{ 
+        li{
+            display: inline-block; 
+            font: 600 14px/30px $mon;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 0 20px;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            color: #000;
+            cursor: pointer;
+            &:hover, &:focus{
+                color: $hover;
+                border: 2px solid $hover;
+            } 
+            &.active{ 
+                border-color: $hover;
+                color: $hover; 
+            }
+        }
+    }
+}
+/* filters_row */
+
+.projects{
+    padding: 0 20px;
+    padding-bottom: 160px;
+    .grid-sizer{
+        width: 25%; 
+        @media (max-width:991px){
+            width: 33.3333%;
+        }
+        @media (max-width:767px){
+            width: 100%;
+        }
+    }
+    
+    #projects_element{ 
+        .project_item{
+            padding: 0 20px;
+            padding-bottom: 40px; 
+            .inner{
+                position: relative; 
+                z-index: 3;
+                img{
+                    max-width: 100%;
+                }
+                &:after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    display: block;
+                    background-image: -moz-linear-gradient( 90deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 100%);
+                    background-image: -webkit-linear-gradient( 90deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 100%);
+                    background-image: -ms-linear-gradient( 90deg, rgb(0,0,0) 0%, rgba(0,0,0,0) 100%);
+                    opacity: 0.702; 
+                    z-index:1;
+                }
+                .featured_content{
+                    padding: 45px; 
+                    position: absolute;
+                    z-index: 3;
+                    left: 0;
+                    bottom: 0;
+                    display: block;
+                    transition: all 400ms linear 0s;
+                    h6{
+                        text-transform: uppercase;
+                        color: #fff;
+                        font: 500 15px/1 $mon;
+                    }
+                    h3{
+                        color: #fff;
+                        padding-top: 15px;
+                        font: 600 28px/36px $pop;
+                    }
+                } 
+                .featured_hover{
+                    position: absolute; 
+                    top: 25px;
+                    left: 25px;
+                    right: 25px;
+                    bottom: 25px;
+                    z-index: 3;
+                    display: block; 
+                    padding: 40px; 
+                    display: flex;
+                    justify-content: center;
+                    vertical-align: middle;
+                    align-items: center;
+                    .hover_iner{
+                        display: block;
+                        width: 100%;
+                    }
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background-color: rgba(215, 175, 58, 0.949); 
+                        -webkit-transform: scaleX(0);
+                        transform: scaleX(0); 
+                        -webkit-transform-origin: 50%;
+                        transform-origin: 50%;
+                        -webkit-transition-property: transform;
+                        transition-property: transform;
+                        transition: all 200ms linear 0s;
+                    }
+                    h6{
+                        text-transform: uppercase;
+                        color: #fff;
+                        font: 500 15px/1 $mon;
+                    }
+                    h3{
+                        color: #fff;
+                        padding-top: 15px;
+                        font: 600 28px/36px $pop;
+                    }
+                    h6, h3{
+                        -webkit-transform: scaleY(0);
+                        transform: scaleY(0); 
+                        -webkit-transform-origin: 50% 0;
+                        transform-origin: 50% 0;
+                        -webkit-transition-property: transform;
+                        transition-property: transform;
+                        transition: all 400ms linear 0s;
+                    }
+                    p, a{
+                        -webkit-transform: scaleY(0);
+                        transform: scaleY(0);
+                        -webkit-transform-origin: 50% 100%;
+                        transform-origin: 50% 100%;
+                        -webkit-transition-property: transform;
+                        transition-property: transform;
+                        transition: all 400ms linear 0s;
+                    }
+                    p{
+                        color: #fff;
+                        font: 400 15px/30px $pop;
+                        padding: 20px 0; 
+                    }
+                    a{
+                        border-color: #000;
+                        &:hover, &:focus{
+                            color: #fff;
+                            border-color: #fff;
+                        }
+                    }
+                }
+                &:hover, &:focus{
+                    .featured_content{
+                        display: none;
+                    }
+                    .featured_hover{
+                        &:before{
+                            -webkit-transform: scaleX(1);
+                            transform: scaleX(1);
+                        }
+                        p, a, h6, h3{
+                            -webkit-transform: scaleY(1);
+                            transform: scaleY(1);
+                        } 
+                    }
+                }
+            }
+        }
+    }
+}  

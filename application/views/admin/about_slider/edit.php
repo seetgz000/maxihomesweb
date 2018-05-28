@@ -60,9 +60,3 @@
         </div>
     </div>
 </section>
-
-<script>
-    $(document).ready(function () {
-        $('#textarea').richText();
-    });
-</script>

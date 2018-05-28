@@ -8,8 +8,6 @@ class AboutSlider extends CI_Controller {
         parent::__construct();
 
         $this->load->model("Access_model");
-        $this->load->model("Admin_model");
-        $this->load->model("User_model");
         $this->load->model("AboutSlider_model");
 
       
@@ -28,12 +26,6 @@ class AboutSlider extends CI_Controller {
         $about_slider =  $this->AboutSlider_model->get_where(array(
             'about_slider_id' => $this->input->post("about_slider_id")
         ))[0];
-
-        $about_slider['file'] = site_url(). $about_slider['file'];
-        die(json_encode(array(
-            "status" => "SUCCESS",
-            "data" => $about_slider
-        )));
     }
 
     function details($about_slider_id) {

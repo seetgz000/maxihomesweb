@@ -73,7 +73,7 @@
                         <li><a href="<?= base_url() ?>AboutSlider/all"><i class="fa fa-book"></i> <span>About Slider</span></a></li>
                         <li><a href="<?= base_url() ?>Location/all"><i class="fa fa-book"></i> <span>Location</span></a></li>
                         <li><a href="<?= base_url() ?>Event/all"><i class="fa fa-book"></i> <span>Event</span></a></li>
-                        <li><a href="<?= base_url() ?>Project/all"><i class="fa fa-book"></i> <span>Project</span></a></li>
+                        <li><a href="<?= base_url() ?>Room/all"><i class="fa fa-book"></i> <span>Room</span></a></li>
                         <li><a href="<?= base_url() ?>access/logout"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>                  
                     </ul>
                 </section>

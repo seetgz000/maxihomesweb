@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2018 at 10:53 AM
+-- Generation Time: May 28, 2018 at 10:47 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -29,10 +29,17 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `about_slider` (
-  `project_slider_id` int(128) NOT NULL,
+  `about_slider_id` int(128) NOT NULL,
   `location_id` int(128) NOT NULL,
-  `thumbnails` varchar(256) NOT NULL
+  `thumbnail` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `about_slider`
+--
+
+INSERT INTO `about_slider` (`about_slider_id`, `location_id`, `thumbnail`) VALUES
+(1, 1, 'asdasd');
 
 -- --------------------------------------------------------
 
@@ -107,32 +114,72 @@ CREATE TABLE `location` (
   `address` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `location`
+--
+
+INSERT INTO `location` (`location_id`, `name`, `address`) VALUES
+(1, 'Bandar Sunway', 'Subang Jaya'),
+(2, 'Glenmarie', 'Shah Alam');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `project`
+-- Table structure for table `rental_condition`
 --
 
-CREATE TABLE `project` (
-  `project_id` int(128) NOT NULL,
-  `name` varchar(128) NOT NULL,
-  `price` decimal(10,2) NOT NULL,
-  `decription` longtext NOT NULL,
-  `address` varchar(256) NOT NULL,
-  `tag` varchar(128) NOT NULL,
-  `advance_rental` decimal(10,0) NOT NULL,
-  `security_deposit` decimal(10,0) NOT NULL,
-  `utilities_deposit` decimal(10,0) NOT NULL,
-  `keycard_deposit` decimal(10,2) NOT NULL,
+CREATE TABLE `rental_condition` (
+  `rental_condition_id` int(128) NOT NULL,
+  `room_id` int(128) NOT NULL,
   `rental_type` varchar(32) NOT NULL,
   `attached_bathroom` tinyint(1) NOT NULL,
   `building_type` varchar(32) NOT NULL,
   `availability` varchar(32) NOT NULL,
   `minimum_tenure` date NOT NULL,
   `furnishing` varchar(32) NOT NULL,
-  `location_id` int(128) NOT NULL,
   `beds_in_room` int(2) NOT NULL,
   `gender_preference` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `room`
+--
+
+CREATE TABLE `room` (
+  `room_id` int(128) NOT NULL,
+  `name` varchar(128) NOT NULL,
+  `decription` longtext NOT NULL,
+  `address` varchar(256) NOT NULL,
+  `location_id` int(128) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `room_price`
+--
+
+CREATE TABLE `room_price` (
+  `room_price_id` int(128) NOT NULL,
+  `room_id` int(128) NOT NULL,
+  `advance_rental` decimal(10,0) NOT NULL,
+  `security_deposit` decimal(10,0) NOT NULL,
+  `utilities_deposit` decimal(10,0) NOT NULL,
+  `keycard_deposit` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tag`
+--
+
+CREATE TABLE `tag` (
+  `tag_id` int(128) NOT NULL,
+  `room_id` int(128) NOT NULL,
+  `tag_name` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -196,7 +243,7 @@ INSERT INTO `user` (`user_id`, `username`, `password`, `salt`, `points`, `delete
 -- Indexes for table `about_slider`
 --
 ALTER TABLE `about_slider`
-  ADD PRIMARY KEY (`project_slider_id`),
+  ADD PRIMARY KEY (`about_slider_id`),
   ADD KEY `location_id` (`location_id`);
 
 --
@@ -225,11 +272,32 @@ ALTER TABLE `location`
   ADD PRIMARY KEY (`location_id`);
 
 --
--- Indexes for table `project`
+-- Indexes for table `rental_condition`
 --
-ALTER TABLE `project`
-  ADD PRIMARY KEY (`project_id`),
+ALTER TABLE `rental_condition`
+  ADD PRIMARY KEY (`rental_condition_id`),
+  ADD KEY `room_id` (`room_id`);
+
+--
+-- Indexes for table `room`
+--
+ALTER TABLE `room`
+  ADD PRIMARY KEY (`room_id`),
   ADD KEY `location_id` (`location_id`);
+
+--
+-- Indexes for table `room_price`
+--
+ALTER TABLE `room_price`
+  ADD PRIMARY KEY (`room_price_id`),
+  ADD KEY `room_id` (`room_id`);
+
+--
+-- Indexes for table `tag`
+--
+ALTER TABLE `tag`
+  ADD PRIMARY KEY (`tag_id`),
+  ADD KEY `room_id` (`room_id`);
 
 --
 -- Indexes for table `user`
@@ -245,7 +313,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `about_slider`
 --
 ALTER TABLE `about_slider`
-  MODIFY `project_slider_id` int(128) NOT NULL AUTO_INCREMENT;
+  MODIFY `about_slider_id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `admin`
@@ -269,13 +337,31 @@ ALTER TABLE `event`
 -- AUTO_INCREMENT for table `location`
 --
 ALTER TABLE `location`
-  MODIFY `location_id` int(128) NOT NULL AUTO_INCREMENT;
+  MODIFY `location_id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `project`
+-- AUTO_INCREMENT for table `rental_condition`
 --
-ALTER TABLE `project`
-  MODIFY `project_id` int(128) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `rental_condition`
+  MODIFY `rental_condition_id` int(128) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `room`
+--
+ALTER TABLE `room`
+  MODIFY `room_id` int(128) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `room_price`
+--
+ALTER TABLE `room_price`
+  MODIFY `room_price_id` int(128) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tag`
+--
+ALTER TABLE `tag`
+  MODIFY `tag_id` int(128) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -294,10 +380,28 @@ ALTER TABLE `about_slider`
   ADD CONSTRAINT `about_slider_ibfk_1` FOREIGN KEY (`location_id`) REFERENCES `location` (`location_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `project`
+-- Constraints for table `rental_condition`
 --
-ALTER TABLE `project`
-  ADD CONSTRAINT `project_ibfk_1` FOREIGN KEY (`location_id`) REFERENCES `location` (`location_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `rental_condition`
+  ADD CONSTRAINT `rental_condition_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `room` (`room_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `room`
+--
+ALTER TABLE `room`
+  ADD CONSTRAINT `room_ibfk_1` FOREIGN KEY (`location_id`) REFERENCES `location` (`location_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `room_price`
+--
+ALTER TABLE `room_price`
+  ADD CONSTRAINT `room_price_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `room` (`room_id`);
+
+--
+-- Constraints for table `tag`
+--
+ALTER TABLE `tag`
+  ADD CONSTRAINT `tag_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `room` (`room_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

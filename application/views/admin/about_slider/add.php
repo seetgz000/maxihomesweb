@@ -131,57 +131,5 @@
             });
 
         });
-        $('#textarea').richText({
-            // text formatting
-            bold: true,
-            italic: true,
-            underline: true,
-
-            // text alignment
-            leftAlign: true,
-            centerAlign: true,
-            rightAlign: true,
-
-            // lists
-            ol: true,
-            ul: true,
-
-            // title
-            heading: true,
-
-            fontColor: true,
-
-            // uploads
-            imageUpload: true,
-            fileUpload: false,
-
-            // media
-            videoEmbed: false,
-
-            // link
-            urls: true,
-
-            // tables
-            table: true,
-
-            // code
-            removeStyles: true,
-            code: true,
-
-            // colors
-            colors: [],
-
-            // dropdowns
-            fileHTML: '',
-            imageHTML: '',
-            
-            // developer settings
-            useSingleQuotes: false,
-            height: 0,
-            heightPercentage: 0,
-            id: "",
-            class: "",
-            useParagraph: false
-        });
     });
 </script>

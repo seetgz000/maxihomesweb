@@ -1,10 +1,10 @@
 <section class="content-header">
     <h1>
-        Article details
+        Location details
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?= base_url() ?>Article/all"><i class="fa fa-book"></i> Article</a></li>
-        <li><a href="<?= base_url() ?>article/details/<?= $article['article_id'] ?>"><?= $article['title'] ?></a></li>
+        <li><a href="<?= base_url() ?>Location/all"><i class="fa fa-book"></i> Location</a></li>
+        <li><a href="<?= base_url() ?>location/details/<?= $location['location_id'] ?>"><?= $location['name'] ?></a></li>
     </ol>
 </section>
 <br>
@@ -13,34 +13,28 @@
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
             <div class="box box-primary center">
                 <div class="box-header">
-                    <h3 class="panel-title">Article Details
-                        <a class="pull-right" href="<?= site_url("article/edit/" . $article['article_id']); ?>">
+                    <h3 class="panel-title">Location Details
+                        <a class="pull-right" href="<?= site_url("location/edit/" . $location['location_id']); ?>">
                             Edit
                         </a>
                     </h3>
                 </div>
+                <hr/>
                 <div class="box-body">
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a  data-toggle="tab" href="#article">Article Information</a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane fade in active" id="article">
-                            <div class="article-thumbnail-container">
-                                <img class="thumbnail" src="<?= base_url() . $article['thumbnail'] ?>">
-                            </div>
-                            <h3><?= $article["title"] ?></h3>
-                            <h4>category : <?= $article["article_category"] ?></h4>
-                            <h4>views : <?= $article["views"] ?></h4>
-                            <hr/>
-                            <h4>Description</h4>
-                            <hr/>
-                            <p class="prewrap"><?=$article["description"]?></p>
-                            <hr/>
-                            <h4>Content</h4>
-                            <hr/>
-                            <?= $article["content"] ?>
-                        </div>
-                    </div>
+                    <table class="formTable">
+                        <tr>
+                            <th>Location Name</th>
+                            <td> 
+                                : <?= $location["name"] ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Location Address</th>
+                            <td> 
+                                : <?= $location["address"] ?>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>

@@ -26,7 +26,7 @@
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2">
 
-                                <img id="thumbnail" src="<?= site_url() . $about_slider["thumbnail"] ?>" class="profile_picture">
+                                <img id="thumbnail" src="<?= site_url() . $about_slider["thumbnail"] ?>" class="img-responsive">
 
                             </div>
                             <div class="col-lg-10 col-md-10 col-xs-10 col-sm-10">
@@ -34,22 +34,10 @@
                             </div>
                         </div>
                         <hr/>
-                        <label>About Slider Location</label>
-                        <select class="form-control" name="location_id">
-                            <?php
-                            foreach ($location as $row) {
-                                ?>
-                                <option value="<?= $row["location_id"] ?>" <?php
-                                if ($row["location_id"] == $about_slider["about_slider_id"]) {
-                                    ?>
-                                            selected
-                                            <?php
-                                        }
-                                        ?>><?= $row["name"] ?></option>
-                                        <?php
-                                    }
-                                    ?>
-                        </select>
+                        <label>About Slider Title</label>
+                        <input type='text' name='title' class='form-control' placeholder="About Slider Title" required value="<?= $about_slider["title"] ?>"/>
+                        <label>About Slider Link</label>
+                        <input type='text' name='link' class='form-control' placeholder="About Slider Link" required value="<?= $about_slider["link"] ?>"/>
                         <br />
                         <input type="submit" value="save" class="btn btn-primary" style="margin-bottom:5%;margin-left:95%;">
                         <br />

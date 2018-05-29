@@ -19,7 +19,6 @@
         <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>/css/jquery-ui.min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>/css/jquery-ui.structure.min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo site_url(); ?>/css/jquery-ui.theme.min.css">
-        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/css/richtext.min.css">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 
 
@@ -56,20 +55,8 @@
             <aside class="main-sidebar">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
-                    <!-- Sidebar user panel -->
-                    <!-- sidebar menu: : style can be found in sidebar.less -->
-                    <!-- <ul class="sidebar-menu">
-                        <?php if($this->session->userdata("user_type") == "admin"){ ?>
-                        <li><a href="<?= base_url() ?>admin/all"><i class="fa fa-users"></i> <span>Admin</span></a></li>
-                        <li><a href="<?= base_url() ?>user/all"><i class="fa fa-users"></i> <span>User</span></a></li>
-                        <?php } ?>
-                        <li><a href="<?= base_url() ?>Books/all"><i class="fa fa-book"></i> <span>Books</span></a></li>
-                        <li><a href="<?= base_url() ?>access/logout"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
-                       
-                    </ul> -->
                     <ul class="sidebar-menu">            
                         <li><a href="<?= base_url() ?>admin/all"><i class="fa fa-users"></i> <span>Admin</span></a></li>
-                        <li><a href="<?= base_url() ?>user/all"><i class="fa fa-users"></i> <span>User</span></a></li>
                         <li><a href="<?= base_url() ?>AboutSlider/all"><i class="fa fa-book"></i> <span>About Slider</span></a></li>
                         <li><a href="<?= base_url() ?>Location/all"><i class="fa fa-book"></i> <span>Location</span></a></li>
                         <li><a href="<?= base_url() ?>Event/all"><i class="fa fa-book"></i> <span>Event</span></a></li>

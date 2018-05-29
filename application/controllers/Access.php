@@ -9,7 +9,7 @@ class Access extends CI_Controller {
         $this->load->model("Access_model");
     }
     
-    function admin_login(){
+    function login(){
         $page_data = array();
         if($this->session->has_userdata("user") && $this->session->userdata("user_type") == "admin"){
             redirect('Admin',"refresh");
@@ -21,8 +21,7 @@ class Access extends CI_Controller {
             if($result){
                 $this->session->set_userdata("user_type","admin");
                 $this->session->set_userdata("user",$result);
-
-               
+                
                redirect("Admin/index","refresh");
             }else{
                 $page_data['error'] = "Invalid username / password";
@@ -35,11 +34,11 @@ class Access extends CI_Controller {
     }
     
     function logout(){
-        // if($this->session->userdata("user_type") == "admin"){
-        //     $redirect = "Access/admin_login";
-        // }else{
-        //     $redirect = "Access/";
-        // }
+        if($this->session->userdata("user_type") == "admin"){
+            $redirect = "Access/login";
+        }else{
+            $redirect = "Access/";
+        }
         $this->Access_model->logout();
         redirect($redirect,'refresh');
     }
@@ -47,25 +46,18 @@ class Access extends CI_Controller {
     function index(){
         $page_data = array();
         if($this->session->has_userdata("user") &&
-        $this->session->userdata("user_type") == "user"
+        $this->session->userdata("user_type") == "admin"
         ){
-            redirect("Portal",'refresh');
+            redirect("Admin",'refresh');
         }
 
         if($_POST){
-            $result = $this->Access_model->login("user",$this->input->post("username"),$this->input->post("password"));
-
-            if($result){
-                $this->session->set_userdata("user_type","user");
-                $this->session->set_userdata("user",$result);
-               redirect("Books/all","refresh");
+            $result = $this->Access_model->login("admin",$this->input->post("username"),$this->input->post("password"));
+            
             }else{
                 $page_data['error'] = "Invalid username / password";
-            }
         }
 
-        $this->load->view("access/header",$page_data);
-        $this->load->view("access/login");
-        $this->load->view("access/footer");
+        redirect("access/login",'refresh');
     }
 }

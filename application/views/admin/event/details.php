@@ -1,10 +1,10 @@
 <section class="content-header">
     <h1>
-        Article details
+        Event details
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?= base_url() ?>Article/all"><i class="fa fa-book"></i> Article</a></li>
-        <li><a href="<?= base_url() ?>article/details/<?= $article['article_id'] ?>"><?= $article['title'] ?></a></li>
+        <li><a href="<?= base_url() ?>Event/all"><i class="fa fa-book"></i> Event</a></li>
+        <li><a href="<?= base_url() ?>Event/details/<?= $event['event_id'] ?>"><?= $event['title'] ?></a></li>
     </ol>
 </section>
 <br>
@@ -13,32 +13,27 @@
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
             <div class="box box-primary center">
                 <div class="box-header">
-                    <h3 class="panel-title">Article Details
-                        <a class="pull-right" href="<?= site_url("article/edit/" . $article['article_id']); ?>">
+                    <h3 class="panel-title">Event Details
+                        <a class="pull-right" href="<?= site_url("event/edit/" . $event['event_id']); ?>">
                             Edit
                         </a>
                     </h3>
                 </div>
                 <div class="box-body">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a  data-toggle="tab" href="#article">Article Information</a></li>
+                        <li class="active"><a  data-toggle="tab" href="#event">Event Information</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div class="tab-pane fade in active" id="article">
-                            <div class="article-thumbnail-container">
-                                <img class="thumbnail" src="<?= base_url() . $article['thumbnail'] ?>">
+                        <div class="tab-pane fade in active" id="event">
+                            <div class="event-thumbnail-container">
+                                <img class="thumbnail img-responsive" src="<?= base_url() . $event['thumbnail'] ?>">
                             </div>
-                            <h3><?= $article["title"] ?></h3>
-                            <h4>category : <?= $article["article_category"] ?></h4>
-                            <h4>views : <?= $article["views"] ?></h4>
+                            <h3><?= $event["title"] ?></h3>
                             <hr/>
                             <h4>Description</h4>
                             <hr/>
-                            <p class="prewrap"><?=$article["description"]?></p>
+                            <p class="prewrap"><?=$event["description"]?></p>
                             <hr/>
-                            <h4>Content</h4>
-                            <hr/>
-                            <?= $article["content"] ?>
                         </div>
                     </div>
                 </div>

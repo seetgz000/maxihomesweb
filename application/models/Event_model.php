@@ -1,23 +1,23 @@
 <?php 
 
-class AboutSlider_model extends CI_Model{
+class Event_model extends CI_Model{
 
     function get_all(){
         $this->db->select('*');
-        $this->db->from('about_slider');
+        $this->db->from('event');
 
         $query = $this->db->get();
 
         return $query->result_array();
     }
     function add($data){
-        $this->db->insert("about_slider",$data);
+        $this->db->insert("event",$data);
 
     }
 
     public function get_where($where) {
         $this->db->select('*');
-        $this->db->from('about_slider');
+        $this->db->from('event');
         $this->db->where($where);
 
         $query = $this->db->get();
@@ -25,9 +25,9 @@ class AboutSlider_model extends CI_Model{
         return $query->result_array();
     }
 
-    function edit($about_slider_id,$data){
-        $this->db->where("about_slider_id",$about_slider_id);
-        $this->db->update("about_slider",$data);
+    function edit($event_id,$data){
+        $this->db->where("event_id",$event_id);
+        $this->db->update("event",$data);
     }
 
 }

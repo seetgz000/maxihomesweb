@@ -1,9 +1,10 @@
 <div class='loginBox '>
     <div class="panel-heading">
-        <h2 class="text-center">
-            <img src="<?= site_url() . '/images/logo.png'; ?>" style="width:30%">
-        </h2>
+        <h3>
+            Login
+        </h3>
     </div>
+    <hr/>
     <div class='panel-body'>
         <form method="post">
             <div class="input-group">
@@ -21,7 +22,7 @@
                 <input name='password' type="password" placeholder='password' class="form-control" />
             </div>
             <div class ="button-container">
-                <input type="submit" value='login' class="btn btn-default" style='margin-top : 3%;margin-left: 80%;margin-bottom : 5%;'>
+                <input type="submit" value='login' class="btn btn-primary form-control">
             </div>
         </form>
         <?php if(isset($error)){ ?>

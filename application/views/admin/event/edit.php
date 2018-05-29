@@ -1,10 +1,10 @@
 <section class="content-header">
     <h1>
-        Edit article
+        Edit event
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?= base_url() ?>article/all"><i class="fa fa-articles"></i> Article</a></li>
-        <li><a href="<?= base_url() ?>article/edit/<?= $article["article_id"] ?>"> Edit article</a></li>
+        <li><a href="<?= base_url() ?>event/all"><i class="fa fa-events"></i> Event</a></li>
+        <li><a href="<?= base_url() ?>event/edit/<?= $event["event_id"] ?>"> Edit event</a></li>
     </ol>
 </section>
 <br>
@@ -12,7 +12,7 @@
     <div class="mediumBox">
         <div class="panel panel-success">
             <div class="panel panel-heading">
-                <h4 class="whiteTitle">Edit Article </h4>
+                <h4 class="whiteTitle">Edit Event </h4>
             </div>
             <div>
                 <?php if (isset($error)) { ?>
@@ -21,12 +21,12 @@
                     </div>
                 <?php } ?>
 
-                <form method="post" action="<?= base_url() ?>Article/edit/<?= $article["article_id"] ?>" enctype="multipart/form-data">
+                <form method="post" action="<?= base_url() ?>Event/edit/<?= $event["event_id"] ?>" enctype="multipart/form-data">
                     <div class="mediumBox">
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-xs-2 col-sm-2">
 
-                                <img id="thumbnail" src="<?= site_url() . $article["thumbnail"] ?>" class="profile_picture">
+                                <img id="thumbnail" src="<?= site_url() . $event["thumbnail"] ?>" class="img-responsive">
 
                             </div>
                             <div class="col-lg-10 col-md-10 col-xs-10 col-sm-10">
@@ -34,28 +34,10 @@
                             </div>
                         </div>
                         <hr />
-                        <label>Article Title</label>
-                        <input type='text' name='title' class='form-control' placeholder="Article Title" required value="<?= $article["title"] ?>"/>
-                        <label>Article Category</label>
-                        <select class="form-control" name="article_category_id">
-                            <?php
-                            foreach ($article_categories as $row) {
-                                ?>
-                                <option value="<?= $row["article_category_id"] ?>" <?php
-                                if ($row["article_category_id"] == $article["article_category_id"]) {
-                                    ?>
-                                            selected
-                                            <?php
-                                        }
-                                        ?>><?= $row["article_category"] ?></option>
-                                        <?php
-                                    }
-                                    ?>
-                        </select>
-                        <label>Article Description</label>
-                        <textarea name='description' class='form-control' placeholder="Article Description" rows="5" required><?=$article["description"]?></textarea>
-                        <label>Article Content</label>
-                        <textarea class="form-control" rows="10" required name="content" placeholder="Article Content" id="textarea"><?= $article["content"] ?></textarea>
+                        <label>Event Title</label>
+                        <input type='text' name='title' class='form-control' placeholder="Event Title" required value="<?= $event["title"] ?>"/>
+                        <label>Event Description</label>
+                        <textarea name='description' class='form-control' placeholder="Event Description" rows="5" required><?=$event["description"]?></textarea>
                         <br />
                         <input type="submit" value="save" class="btn btn-primary" style="margin-bottom:5%;margin-left:95%;">
                         <br />
@@ -66,9 +48,3 @@
         </div>
     </div>
 </section>
-
-<script>
-    $(document).ready(function () {
-        $('#textarea').richText();
-    });
-</script>

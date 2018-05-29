@@ -2,10 +2,6 @@
 
 class Location_model extends CI_Model{
 
-    // function get_all(){
-    //     return $this->db->get("about_slider")->result_array();
-    // }
-
     function get_all(){
         $this->db->select('*');
         $this->db->from('location');

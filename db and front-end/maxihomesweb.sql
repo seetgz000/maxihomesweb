@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2018 at 06:39 PM
+-- Generation Time: May 29, 2018 at 11:35 PM
 -- Server version: 5.7.12-log
 -- PHP Version: 5.6.25
 
@@ -65,7 +65,8 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`admin_id`, `role_id`, `username`, `password`, `salt`, `deleted`, `token`, `email`, `contact`) VALUES
 (3, 1, 'cyyang', '27f501a09a16885bd6440acbf13ddeee35d64883f76c8e99c386e0acc8fc87d4', 592691, 0, 'dabs57p6ih', 'cyyang94@hotmail.com', '+60167780275'),
 (4, 1, 'rob', 'cbc4551a758cf172cde258bb438585ae3edb9842df01877412cc17bf477cb537', 996509, 0, '', 'robxlee@hotmail.com', '123'),
-(8, 1, 'ukbadmin', 'cbb6412a1b8db615de60ee4beaea5cbdd97b6319f885caf325d5af7f2ae7e8c4', 115657, 0, '', 'willen.wong@grownce.com', '+60127201755');
+(8, 1, 'ukbadmin', 'cbb6412a1b8db615de60ee4beaea5cbdd97b6319f885caf325d5af7f2ae7e8c4', 115657, 0, '', 'willen.wong@grownce.com', '+60127201755'),
+(9, 1, 'Seet', 'e6d69d2d7f334e990309e3a320e34be041a4468f43b6fa5fbde788fade1dc756', 495361, 0, '', 'sgz@asd', '000');
 
 -- --------------------------------------------------------
 
@@ -140,7 +141,7 @@ CREATE TABLE `rental_condition` (
   `rental_type` varchar(32) NOT NULL,
   `attached_bathroom` tinyint(1) NOT NULL,
   `building_type` varchar(32) NOT NULL,
-  `availability` varchar(32) NOT NULL,
+  `availability` tinyint(1) NOT NULL,
   `minimum_tenure` date NOT NULL,
   `furnishing` varchar(32) NOT NULL,
   `beds_in_room` int(2) NOT NULL,
@@ -156,10 +157,18 @@ CREATE TABLE `rental_condition` (
 CREATE TABLE `room` (
   `room_id` int(128) NOT NULL,
   `name` varchar(128) NOT NULL,
-  `decription` longtext NOT NULL,
+  `description` longtext NOT NULL,
   `address` varchar(256) NOT NULL,
+  `thumbnail` varchar(256) NOT NULL,
   `location_id` int(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `room`
+--
+
+INSERT INTO `room` (`room_id`, `name`, `description`, `address`, `thumbnail`, `location_id`) VALUES
+(0, 'sad', 'asd', 'sad', '/images/room/382680562.png', 2);
 
 -- --------------------------------------------------------
 
@@ -265,7 +274,7 @@ ALTER TABLE `about_slider`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `admin_role`
 --
@@ -285,12 +294,7 @@ ALTER TABLE `location`
 -- AUTO_INCREMENT for table `rental_condition`
 --
 ALTER TABLE `rental_condition`
-  MODIFY `rental_condition_id` int(128) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `room`
---
-ALTER TABLE `room`
-  MODIFY `room_id` int(128) NOT NULL AUTO_INCREMENT;
+  MODIFY `rental_condition_id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `room_price`
 --
@@ -321,7 +325,7 @@ ALTER TABLE `room`
 -- Constraints for table `room_price`
 --
 ALTER TABLE `room_price`
-  ADD CONSTRAINT `room_price_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `room` (`room_id`);
+  ADD CONSTRAINT `room_price_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `room` (`room_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tag`

@@ -1,9 +1,9 @@
 <section class="content-header">
     <h1>
-        Article
+        Room
     </h1>
     <ol class="breadcrumb">
-        <li><a href="<?= base_url() ?>Article/all"><i class="fa fa-book"></i> Article</a></li>
+        <li><a href="<?= base_url() ?>Room/all"><i class="fa fa-book"></i> Room</a></li>
     </ol>
 </section>
 <br>
@@ -11,8 +11,8 @@
     <div class="mediumBox">
         <div class='panel panel-default'>
             <div class='panel-heading'>
-                <h4 class="whiteTitle" style='display: inline-block;'> Article</h4>
-                <a href='<?php echo site_url('article/add'); ?>' class='btn btn-info pull-right'>
+                <h4 class="whiteTitle" style='display: inline-block;'> Room</h4>
+                <a href='<?php echo site_url('room/add'); ?>' class='btn btn-info pull-right'>
                     <i class='glyphicon glyphicon-plus' ></i> Add</a>
             </div>
             <div class='panel-body'>
@@ -22,8 +22,9 @@
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Title</th>
-                                <th>Category</th>
+                                <th>Name</th>
+                                <th>Advance Rental</th>
+                                <th>Location</th>
 
                                 <th></th>
                             </tr>
@@ -31,13 +32,14 @@
                         <tbody>
                             <?php
                             $i = 1;
-                            foreach ($articles as $row) {
+                            foreach ($room as $row) {
                                 ?>
                                 <tr>
-                                    <td><a href="<?=base_url()?>Article/details/<?=$row["article_id"]?>"><?= $i ?></a></td>
-                                    <td><a href="<?=base_url()?>Article/details/<?=$row["article_id"]?>"><?= $row["title"] ?></a></td>
-                                    <td><a href="<?=base_url()?>Article/details/<?=$row["article_id"]?>"><?= $row["article_category"] ?></a></td>
-                                    <td><a class="btn btn-danger" href="<?= base_url(); ?>Article/delete/<?= $row['article_id']; ?>">delete</a>
+                                    <td><a href="<?=base_url()?>Room/details/<?=$row["room_id"]?>"><?= $i ?></a></td>
+                                    <td><a href="<?=base_url()?>Room/details/<?=$row["room_id"]?>"><?= $row["Name"] ?></a></td>
+                                    <td><a href="<?=base_url()?>Room/details/<?=$row["room_id"]?>"><?= $row["advance_rental"] ?></a></td>
+                                    <td><a href="<?=base_url()?>Room/details/<?=$row["room_id"]?>"><?= $row["location"] ?></a></td>
+                                    <td><a class="btn btn-danger" href="<?= base_url(); ?>Room/delete/<?= $row['room_id']; ?>">delete</a>
                             </td>
                                 </tr>
                                 <?php
@@ -48,8 +50,9 @@
                         <tfoot>
                             <tr>
                                 <th>No.</th>
-                                <th>Title</th>
-                                <th>Category</th>
+                                <th>Name</th>
+                                <th>Advance Rental</th>
+                                <th>Location</th>
                                 <th></th>
                             </tr>
                         </tfoot>

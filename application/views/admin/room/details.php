@@ -27,10 +27,9 @@
                         <h5>Room Name: <?= $room["name"] ?></h5>
                         <h5>Room Location: <?= $room["location"] ?></h5>
                         <h5>Room Address:</h5>
-                        <p class="prewrap"><?= $room["location"] ?></p>
+                        <p class="prewrap"><?= $room["address"] ?></p>
                         <h5>Room Description:</h5>
                         <p class="prewrap"><?= $room["description"] ?></p>
-                        <label>Room Description</label>
                     </div>
                 </div>
             </div>
@@ -55,7 +54,13 @@
                                     echo "No";} ?>
                             </h5>
                             <h5>Building Type: <?= $room["building_type"] ?></h5>
-                            <h5>Availability: <?= $room["availability"] ?></h5>
+                            <h5>Availability: 
+                                <?php
+                                if($room['availability'] == 0){
+                                    echo "Yes";
+                                }else{
+                                    echo "No";} ?>
+                            </h5>
                             <h5>Minimum Tenure: <?= $room["minimum_tenure"] ?></h5>
                             <h5>Furnishing: <?= $room["furnishing"] ?></h5>
                             <h5>Beds In Room: <?= $room["beds_in_room"] ?></h5>

@@ -113,6 +113,7 @@ class Room extends CI_Controller {
     function edit($room_id) {
         $this->load->model("Room_model");
         $page_data = array(
+            'location' => $this->Location_model->get_all(),
             'room' => $this->Room_model->get_where(array(
                 'room.room_id' => $room_id
             ))[0]
@@ -127,16 +128,41 @@ class Room extends CI_Controller {
             
 
             $data = array(
-                "title" => $this->input->post("title"),
-                "description" => $this->input->post("description")
+                'name' => $this->input->post('name'),
+                "description" => $this->input->post("description"),
+                "address" => $this->input->post("address"),
+                "location_id" => $this->input->post("room_location_id")
+            ); 
+
+            $priceData = array(
+                'advance_rental' => $this->input->post('advance_rental'),
+                'security_deposit' => $this->input->post('security_deposit'),
+                'utilities_deposit' => $this->input->post('utilities_deposit'),
+                'keycard_deposit' => $this->input->post('keycard_deposit')
             );
+
+            $conditionData = array(
+                'rental_type' => $this->input->post('rental_type'),
+                'attached_bathroom' => $this->input->post('attached_bathroom'),
+                'building_type' => $this->input->post('building_type'),
+                'availability' => $this->input->post('availability'),
+                'minimum_tenure' => $this->input->post('minimum_tenure'),
+                'furnishing' => $this->input->post('furnishing'),
+                'beds_in_room' => $this->input->post('beds_in_room'),
+                'gender_preference' => $this->input->post('gender_preference')
+            );
+
+            $this->Room_model->editTag($room_id,$this->input->post('tags'));
+            $this->Room_model->editPrice($room_id,$priceData);
+            $this->Room_model->editCondition($room_id,$conditionData);
+            
             $this->Room_model->edit($room_id,$data);
 
             if(!empty($_FILES['thumbnail']['name'])){
                 if($this->upload->do_upload("thumbnail")){
                     $data['thumbnail'] = "/images/room/".$this->upload->data()['file_name'];
 
-                    $this->Room_model->edit($room_id,$data);
+                    $this->Room_model->edit($data);
                     redirect("Room/all",'redirect');
                 }else{
                      $page_data['error'] = $this->upload->display_errors();

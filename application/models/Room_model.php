@@ -24,6 +24,7 @@ class Room_model extends CI_Model{
 
     public function get_where($where) {
         $this->db->select('room.*,
+            location.location_id,
             location.name as location,
             room_price.*,
             rental_condition.*');
@@ -65,6 +66,21 @@ class Room_model extends CI_Model{
     
     function addCondition ($conditionData) {
         $this->db->insert("rental_condition",$conditionData);
+    }
+    function editTag($room_id,$tag){
+        $this->db->where("room_id",$room_id);
+        $this->db->delete("tag");
+        $this->addTag($room_id,$tag);
+    }
+
+    function editPrice ($room_id,$priceData) {
+        $this->db->where("room_id",$room_id);
+        $this->db->update("room_price",$priceData);
+    }
+    
+    function editCondition ($room_id,$conditionData) {
+        $this->db->where("room_id",$room_id);
+        $this->db->update("rental_condition",$conditionData);
     }
 
 }

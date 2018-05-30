@@ -124,7 +124,7 @@
                             <div id="tags">
                                 <br class="input_0">
                                 <input type='text' name='tags[]' style="width:80%;display:inline-block;" class="input_0 form-control" placeholder="Tag" required/>
-                                <a href="#" class="input_0" onclick="remove(0)">remove</a>
+                                <a href="javascript:void(0)" class="input_0" onclick="remove(0)">remove</a>
                                 <br class="input_0">
                             </div>
                             <br />
@@ -182,7 +182,7 @@
     function addTag(){
         var padding = '<br class="input_'+ inputCounter + '">';
         var input = '<input type="text" style="width:80%;display:inline-block;" name="tags[]" class="input_'+ inputCounter + ' form-control" placeholder="Tag"> ';
-        var remove = '&nbsp;<a href="#" class="input_'+ inputCounter + '" onclick="remove('+ inputCounter +')">remove</a> ';
+        var remove = '&nbsp;<a href="javascript:void(0)" class="input_'+ inputCounter + '" onclick="remove('+ inputCounter +')">remove</a> ';
         var padding2 = '<br class="input_'+ inputCounter + '">';
 
         $("#tags").append(padding);

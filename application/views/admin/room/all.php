@@ -36,7 +36,7 @@
                                 ?>
                                 <tr>
                                     <td><a href="<?=base_url()?>Room/details/<?=$row["room_id"]?>"><?= $i ?></a></td>
-                                    <td><a href="<?=base_url()?>Room/details/<?=$row["room_id"]?>"><?= $row["Name"] ?></a></td>
+                                    <td><a href="<?=base_url()?>Room/details/<?=$row["room_id"]?>"><?= $row["name"] ?></a></td>
                                     <td><a href="<?=base_url()?>Room/details/<?=$row["room_id"]?>"><?= $row["advance_rental"] ?></a></td>
                                     <td><a href="<?=base_url()?>Room/details/<?=$row["room_id"]?>"><?= $row["location"] ?></a></td>
                                     <td><a class="btn btn-danger" href="<?= base_url(); ?>Room/delete/<?= $row['room_id']; ?>">delete</a>

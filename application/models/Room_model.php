@@ -4,12 +4,10 @@ class Room_model extends CI_Model{
 
     function get_all(){
         $this->db->select('room.*,
-            tag.tag_name as tag,
             location.name as location,
             room_price.*,
             rental_condition.*');
         $this->db->from('room');
-        $this->db->join('tag', 'room.room_id = tag.room_id');
         $this->db->join('location', 'room.location_id = location.location_id');
         $this->db->join('room_price', 'room.room_id = room_price.room_id');
         $this->db->join('rental_condition', 'room.room_id = rental_condition.room_id');
@@ -21,24 +19,30 @@ class Room_model extends CI_Model{
     function add($data){
         $this->db->insert("room",$data);
 
+        return $this->db->insert_id();
     }
 
     public function get_where($where) {
         $this->db->select('room.*,
-            tag.tag_name as tag,
             location.name as location,
             room_price.*,
             rental_condition.*');
-        $this->db->from('room');
-        $this->db->join('tag', 'room.room_id = tag.room_id');
         $this->db->join('location', 'room.location_id = location.location_id');
         $this->db->join('room_price', 'room.room_id = room_price.room_id');
-        $this->db->join('rental_condition', 'room.room_id = rental_condition.room_id');
-        $this->db->where($where);
+        $this->db->join('rental_condition', 'rental_condition.room_id = room.room_id');
 
-        $query = $this->db->get();
+        $room = $this->db->get_where("room",$where)->result_array();
 
-        return $query->result_array();
+        for($i = 0; $i < count($room); $i++){
+            $tag = $this->db->get_where("tag",array(
+                "room_id" => $room[$i]['room_id']
+            ))->result_array();
+            $room[$i]['tag'] = $tag;
+        }
+
+        return $room;
+
+
     }
 
     function edit($room_id,$data){
@@ -49,7 +53,7 @@ class Room_model extends CI_Model{
     function addTag($room_id,$tag){
         for($i = 0; $i < count($tag); $i++){
             $this->db->insert("tag",array(
-                "tag" => $tag[$i],
+                "tag_name" => $tag[$i],
                 "room_id" => $room_id
             ));
         }

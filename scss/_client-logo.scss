@@ -1,0 +1,15 @@
+.client_logo_area{
+    padding-top: 80px;
+    padding-bottom: 150px;
+    text-align:center;
+    .client_logo{
+        .item{
+            padding-left: 25px;
+            padding-right: 25px;
+            img{
+                width: auto; 
+                display: inline-block;
+            }
+        }
+    }
+}

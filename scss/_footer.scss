@@ -1,0 +1,75 @@
+.footer_area{
+    background: url("../images/footer-bg.jpg") no-repeat center;
+    background-size: cover; 
+    padding: 80px 0;
+    padding-bottom: 60px;
+    display: block;
+    overflow: hidden;
+    .foter_row{
+        border-bottom: 1px solid #292929;
+        padding-bottom: 50px;
+        .footer_logo{
+            padding-top: 10px;
+        }
+        .footer_menu{
+            padding: 0;
+            .navbar_menu{
+                text-align: center;
+                li{
+                    display: inline-block;
+                    a{
+                        font: 400 13px/40px $mon;
+                        text-transform: uppercase;
+                        padding: 0;
+                        padding-right: 30px;
+                        background-color: transparent;
+                        color: #fff;
+                        &:hover, &:focus{
+                            color: $hover;
+                        }
+                    }
+                }
+            }
+            .socail_nav{
+                text-align: right;
+                li a{
+                    padding-left: 20px;
+                    padding-right: 0;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .copy_right_area{
+        padding-top: 60px;
+        h5{
+            font: 300 18px/1 $mon;
+            color: #fff;
+            display: inline-block; 
+            a{
+                color: $hover;
+                &:hover, &:focus{
+                    color: #fff;
+                }
+            }
+        }
+        .privacy{
+            float: right;
+            text-align: right;
+            margin-top: -2px;
+            li{
+                display: inline-block;
+                a{
+                    padding-left: 20px;
+                    font: 12px/1 $mon;
+                    color: #fff;
+                    opacity: .30;
+                    text-transform: uppercase;
+                    &:hover, &:focus{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

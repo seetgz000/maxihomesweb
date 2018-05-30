@@ -1,0 +1,115 @@
+/* Header Area */
+.header_area{
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    padding:30px 40px 0; 
+    position: fixed;
+    left: 0; 
+    z-index: 999;
+    @include transition;
+    .navbar-header{
+        padding-top: 10px;
+        .navbar-brand{
+            img{
+                
+            }
+        }
+    }
+    #header_collapse{
+        .navbar_menu{
+            li{
+                a{
+                    font: 400 15px/70px $mon;
+                    text-transform: uppercase;
+                    padding: 0;
+                    padding-left: 30px;
+                    background-color: transparent;
+                    color: #fff;
+                    &:hover, &:focus{
+                        color: $hover;
+                    }
+                } 
+                &.submenu{  
+                    a i{
+                        padding-left: 7px;
+                    }
+                    ul, .search_here{
+                        border: none;
+                        box-shadow: none;
+                        border-radius: 0 0px 5px 5px;
+                        min-width: 200px;
+                        transition: all .2s ease;
+                        background:$hover !important; 
+                        padding: 0;
+                        @media (min-width: 767px){ 
+                            display: block; 
+                            opacity: 0;
+                            transform: translateY(20px);  
+                            visibility: hidden; 
+                            background-color: rgb(255, 255, 255);
+                            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+                        }
+                        li{
+                            display: block; 
+                            padding: 0; 
+                            a{
+                                line-height: normal; 
+                                padding: 10px 20px;
+                                display: block; 
+                                color: #fff;
+                                text-align: left;  
+                                &:hover, &:focus{
+                                    background: #fff !important;
+                                    color: $hover;
+                                }
+                            } 
+                        }
+                    }
+                    .search_here{
+                        background: $hover;
+                        min-width: 300px;
+                        padding: 10px;
+                        border-radius: 3px;
+                        .input-group{
+                            input, span{
+                                box-shadow: none;
+                                outline: none;
+                                border: 0;
+                            }
+                            span{
+                                cursor: pointer;
+                                &:hover, &:focus{
+                                    color: $hover;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:hover, &:focus{
+                    &.submenu{
+                        @media (min-width: 767px){ 
+                            ul, .search_here{ 
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    &.menu_bg{
+        background: $hover;
+        padding-top: 0;
+        #header_collapse .navbar_menu li a{
+            &:hover, &:focus{
+                color: #000;
+            }
+        }
+    }
+}

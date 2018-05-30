@@ -1,0 +1,22 @@
+.cuntrap_area{ 
+    .cuntrap_row{
+        background: url(../images/background.png);
+        padding-bottom: 70px;
+        padding-top: 65px;
+        .counter_item{
+            text-align: center;
+            span{
+                font: 800 60px/1 $mon;
+                color: #000;
+            }
+            h6{
+                font: 400 16px/1 $mon;
+                color: #939393;
+                padding-top: 13px;
+            }
+        }
+    }
+}
+.cuntrap_2{
+    margin-bottom: 170px;
+}

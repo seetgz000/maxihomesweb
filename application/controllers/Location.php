@@ -7,6 +7,12 @@ class Location extends CI_Controller {
     function __construct() {
         parent::__construct();
 
+        if($this->session->userdata("user_type") != 'admin'){
+
+    
+            redirect("Access/logout",'refresh');
+        }
+
         $this->load->model("Access_model");
         $this->load->model("Location_model");
 

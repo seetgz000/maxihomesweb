@@ -1,0 +1,474 @@
+@media (max-width:1466px){
+    .projects #projects_element .project_item .inner .featured_content h3{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .projects #projects_element .project_item .inner .featured_hover h3{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .projects{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .projects #projects_element .project_item{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width:1366px){
+    .slide-wrapper #myCarousel .carousel-inner .item3 .fill .inner-content .carousel-desc {
+        padding-left: 180px;
+    }
+    .carousel-img{
+        top: 43%;
+    }
+    .slide-wrapper #myCarousel .carousel-inner .item3 .fill .inner-content{
+        .carousel-img{
+            img{
+                max-height: 500px; 
+            }
+        }
+    }
+    .projects #projects_element .project_item .inner .featured_hover p{
+        padding: 5px 0;
+    }
+    .projects #projects_element .project_item .inner .featured_content{
+        padding: 20px;
+    }
+} 
+
+@media (max-width:1258px){
+    .projects #projects_element .project_item .inner .featured_hover p{
+        display: none;
+    }
+}
+@media (max-width:1199px){
+    .slide-wrapper #myCarousel .carousel-inner .item3 .fill .inner-content .carousel-desc {
+        padding-left: 30px;
+    }
+    
+    .slide-wrapper #myCarousel .carousel-inner .item3 .fill .inner-content{
+        .carousel-img{
+            img{ 
+                margin: 0 30px;
+            }
+        }
+    }
+    .welcome_to_evo .provide_qualty .provide_images{
+        max-width: 400px;
+    }
+    .welcome_to_evo .provide_qualty .provide_images::after{
+        right: 70px;
+    }
+    .our_services_area .our_services_row .interior .interior_content{
+        padding-top: 5px;
+    }
+    .service_about .service_about_row .provide_great h2::before{
+        display: none;
+    }
+    .contact_area .contact_row .send_message{
+        padding-right: 15px;
+    }
+    .contact_area .contact_row .contact_info{
+        padding-left: 15px;
+    }
+}
+@media (max-width:991px){
+    .carousel.slide .carousel-indicators{
+        right: 30px;
+    }
+    .slide-wrapper #myCarousel .carousel-inner .item .fill .inner-content .carousel-desc h2{
+        font-size: 40px;
+    }
+    .item1 .carousel-img img, .item1.active .carousel-img img {
+        max-height: 400px;
+    }
+    .slide-wrapper #myCarousel .carousel-inner .item3 .fill .inner-content .carousel-desc h2{
+        line-height: 50px;
+    }
+    .welcome_to_evo .provide_qualty .provide_qualty_content{
+        padding-bottom: 120px;
+    }
+    .welcome_to_evo .provide_qualty .provide_images {
+        max-width: 400px;
+        margin: 0 auto;
+        float: none;
+    }
+    .tittle a{
+        float: none;
+        margin-top: 0;
+    }
+    .our_services_area .our_services_row .interior .interior_content{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 15px;
+        p{
+            padding-left: 0px;
+        }
+        a{
+            margin-left: 0px;
+        }
+        h5::before{
+            display: none;
+        } 
+        h3{
+            font-size: 30px;
+            line-height: 35px;
+        }
+    }
+    .our_services_area .our_services_row .interior_right{
+        text-align: left;
+        .interior_content{
+            padding-left: 15px;
+            padding-right: 15px; 
+        }
+    } 
+    .our_services_area .our_services_row .interior .interior_img{
+        padding-right: 7px;
+        img{
+            width: 100%;
+            max-height: 380px;
+        }
+    }
+    .our_services_area .our_services_row .interior_right .interior_img {
+        padding-left: 0; 
+        float: none !important;
+    } 
+    .our_team_area .team_row .team_member .team_content{
+        margin-right: 0;
+    }
+    .footer_area .foter_row .footer_menu .socail_nav{
+        float: none;
+        text-align: center;
+        padding-top: 10px; 
+    }
+    
+    .service_about{
+        padding-top: 80px;
+    }
+    .service_about .service_about_row .provide_great {
+        h6{
+            padding-top: 30px;
+        }
+        p{
+            padding-bottom: 0;
+            padding-top: 20px;
+        } 
+        h2{
+            font-size: 35px;
+            line-height: 40px;
+        }
+    } 
+    .service_about .service_about_row .provide_great_bottom{
+        padding-left: 15px;
+        padding-top: 40px;
+       
+    }
+    .client_love_work .client_love_row .client_slider .item p{
+        font-size: 18px;
+        line-height: 35px;
+    }
+    .client_love_work{
+        margin: 0 15px;
+        .client_love_row{
+            h2{
+                padding-bottom: 30px;
+            }
+            .client_slider .item .client_name{
+                padding-top: 30px;
+            }
+        } 
+    }
+    .contact_area{
+        padding: 60px 0;
+        .contact_row{
+            padding: 0;
+            padding-top: 60px;
+        }
+        iframe{
+            height: 300px;
+        }
+        .contact_info{
+            padding-top: 50px;
+        }
+    }
+    .blog_masonary .masonary_row .blog_item .news_cont .news_heading{
+        padding-right: 0;
+    }
+    .single_project_area .single_project_row .blue_heaven .Blue_heading { 
+        text-align: left;
+        padding-right: 0;
+        padding-bottom: 10px;
+    }
+    .footer_area .copy_right_area h5{
+        font-size: 14px;
+    }
+    .client_logo_area{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .news, .blog_masonary .masonary_row .blog_item .news{
+        padding: 25px;
+        .news_heading{
+            padding-right: 0;
+        }
+    } 
+    
+    .footer_area .foter_row .footer_logo{
+        text-align: center;
+        padding-bottom: 20px; 
+    }
+}  
+@media (max-width:767px){ 
+    .header_area .navbar_menu{
+        background: $hover;
+        margin: 0;
+        padding: 10px 0;
+    }
+    #header_collapse{
+        padding: 0;
+    }
+    .header_area #header_collapse .navbar_menu li a{
+        line-height: 40px; 
+        padding-left: 15px;
+        &:hover, &:focus{
+            background: #fff;
+            color: $hover;
+        }
+    }
+    .header_area #header_collapse .navbar_menu li.submenu ul{
+        padding-left: 20px;
+    }
+    .header_area #header_collapse .navbar_menu li.submenu .search_here{
+        min-width: 100%;
+    }
+    .header_area.menu_bg{
+        .navbar-toggle{
+            margin-top: 2px;
+        }
+        .navbar-brand{
+            padding-top: 11px !important;
+        }
+    }
+    .welcome_to_evo .provide_qualty .provide_qualty_content h2::before{
+        display: none;
+    }
+    .cuntrap_area .cuntrap_row .counter_item{
+        padding-bottom: 40px;
+    }
+    .welcome_to_evo{
+        padding: 80px 0;
+    }
+    .latest_project_area .gallery_item .tab_content .tabs_item .item .market_content {
+        left: 30px;
+        bottom: 30px; 
+    }
+    .latest_project_area .gallery_row .view_project{
+        padding-top: 30px;
+        a{
+            float: none;
+        }
+    }
+    .our_services_area .our_services_row .interior .interior_content{
+        p{
+            padding-left: 0;
+        } 
+        a{
+            margin-left: 0;
+        }
+        
+    }  
+    .latest_project_area{
+        padding: 60px 0;
+    }
+    .our_services_area {
+        padding-bottom: 60px;
+    }
+    .client_love_work .client_love_row #client_slider .slides li p{
+        font-size: 20px;
+        line-height: 35px;
+    }
+    .our_team_area, .our_news_area{
+        padding-top: 60px;
+    }
+    .our_team_area .team_row .team_member {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+    .news .news_heading, .blog_masonary .masonary_row .blog_item .news .news_heading{
+        padding-right: 0;
+    } 
+    .client_logo_area{ 
+        padding: 20px 15px 60px;
+    }
+    .footer_area .copy_right_area .privacy {
+        float: none;
+        text-align: center;
+        padding-bottom: 20px;
+        li a{
+            padding: 0 10px;
+        }
+    }
+    .footer_area .copy_right_area h5{
+        display: block;
+        text-align: center;
+    }
+    .pages_banner_area{
+        &:after{
+            display: none;
+        }
+        .about_pages {
+            padding-top: 150px;
+            padding-bottom: 80px;
+            H2{
+                font-size: 30px;
+            }
+        }
+    } 
+    .cuntrap_2{
+        margin-bottom: 60px;
+    }
+    .our_services_area_2{
+        padding-top: 0;
+    }
+    .blog_masonary {
+        padding: 60px 0; 
+    }
+    .single_blog_area {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .single_blog_area .single_blog_row .news_blog .jhone_doe{
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .single_blog_area .freatures_images img{
+        padding-bottom: 20px;
+    }
+    .post_comment, .project_area_2{
+        padding: 60px 0;
+    }
+    
+    .projects #projects_element .project_item .inner .featured_hover p{
+        display: block;
+        padding: 20px 0;
+    } 
+    .projects #projects_element .project_item{
+        width: 100%;
+        .inner{
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    }
+    .filters_row{
+        padding: 60px 15px;
+    }
+    .projects #projects_element .project_item .inner .featured_content {
+        padding: 40px;
+    }
+    .projects{
+        padding-bottom: 60px;
+    }
+    .latest_project_area .gallery_item {
+        padding-top: 10px;
+    }
+    .single_project_area .single_project_row .blue_heaven .date_col{
+        padding-top: 20px;
+    }
+    .single_project_area{
+        padding: 60px 15px;
+    }
+    .our_team_2{
+        padding: 0;
+    }
+    .welcome_to_evo .provide_qualty .provide_qualty_content{ 
+        h2{
+            font-size: 30px;
+            line-height: 38px;
+            padding-top: 15px;
+        }
+        h4{
+            font-size: 24px;
+            line-height: 35px;
+            padding-top: 30px;
+        }
+        p{
+            padding-top: 30px;
+        }
+    }  
+}   
+
+@media (max-width:500px){
+    h2{
+        font-size: 30px !important;
+        line-height: 40px !important;
+    }
+    .welcome_to_evo .provide_qualty .provide_qualty_content h2{
+        padding-top: 20px;
+    }
+    .welcome_to_evo .provide_qualty .provide_images{
+        max-width: 280px;
+    }
+    .welcome_to_evo .provide_qualty .provide_images::after {
+        right: 40px;
+        top: -40px;
+    }
+    .welcome_to_evo .provide_qualty .provide_qualty_content h4{
+        font-size: 25px;
+        line-height: 35px;
+    }
+    
+    .our_services_area .our_services_row .interior .interior_content{
+        h3{
+            font-size: 30px;
+            line-height: 35px;
+        }
+        p{
+            padding-right: 0;
+        }
+    } 
+    .footer_area .foter_row .footer_menu .navbar_menu li a{
+        line-height: 30px; 
+    }
+    .blog_masonary .masonary_row .blog_item .news{
+        padding: 20px;
+    }
+    .single_blog_area .single_blog_row .news_blog .freatures_images .featur_content .socail_share{
+        float: none;
+    }
+    .comment_area .comment_row .comment .media-left, .comment_area .comment_row .comment_reply .media-left {
+        padding-right: 0px;
+        display: block;
+        padding-bottom: 20px;
+    }
+    .comment_area .comment_row .comment, .comment_area .comment_row .comment_reply{
+        padding: 30px; 
+    }
+    .comment_area .comment_row .comment_reply .media-body p{
+        padding-bottom: 0;
+    }
+    .post_comment .post_comment_row .comment_box{
+        padding: 20px;
+    }
+}
+
+@media (max-width:360px){
+    .latest_project_area .gallery_item .tab_content .tabs_item .item .market_content a{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .slide-wrapper #myCarousel .carousel-inner .item .fill .inner-content .carousel-desc h4{
+        padding-bottom: 10px;
+    }
+    
+    .projects #projects_element .project_item .inner .featured_content {
+        padding: 20px;
+    }
+}
+
+@media (max-width:320px){
+    .projects #projects_element .project_item .inner .featured_hover p {
+        display: none;
+    }
+}

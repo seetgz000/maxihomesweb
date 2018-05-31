@@ -2,18 +2,18 @@
     "use strict"; 
     
     //* menuBg
-    function menuBg(){
-        if ( $('.navbar.navbar-default').length ){ 
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop();   
-                if (scroll >= 120 ) {
-                    $(".navbar.navbar-default").addClass("menu_bg");
-                } else {
-                    $(".navbar.navbar-default").removeClass("menu_bg");
-                }
-            });
-        };
-    };
+    // function menuBg(){
+    //     if ( $('.navbar.navbar-default').length ){ 
+    //         $(window).scroll(function() {
+    //             var scroll = $(window).scrollTop();   
+    //             if (scroll >= 120 ) {
+    //                 $(".navbar.navbar-default").addClass("menu_bg");
+    //             } else {
+    //                 $(".navbar.navbar-default").removeClass("menu_bg");
+    //             }
+    //         });
+    //     };
+    // };
     
     //* Body Scroll Animation
     function bodyScrollAnimation() {
@@ -204,7 +204,7 @@
       
      
     /*Function Calls*/  
-    menuBg ();
+    // menuBg ();
 //    bodyScrollAnimation();
     counterUp ();
     mixIt_Up();

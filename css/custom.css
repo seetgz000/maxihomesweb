@@ -134,4 +134,37 @@
       color : white;
   }
 
-  
+.room_details {
+    min-height: 130px;
+}
+
+.overlay-content a:hover, .overlay-content a:focus {
+    color: #f0ff81!important;
+}
+
+@media (max-width: 767px) {
+    #myNav {
+        display: none;
+    }
+    .desktop {
+        display: none!important;
+    }
+    .mobile {
+        display: block!important;
+    }
+    .social_link {
+        float: none!important;
+    }
+    .social_link li {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 768px) {
+    .desktop {
+        display: block!important;
+    }
+    .mobile {
+        display: none!important;
+    }
+}

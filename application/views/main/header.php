@@ -41,7 +41,7 @@
     <div class="preloader"></div>
     
    <!-- Header Area-->
-    <nav class="navbar navbar-default header_area">
+    <nav class="navbar navbar-default header_area menu_bg">
         <div class="container-fluid p0">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -51,15 +51,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="<?= base_url() ?>/images/logo.png" width="80px" alt=""></a>
+                <a class="navbar-brand" href="<?= base_url() .'main/'?>"><img src="<?= base_url() ?>/images/logo.png" width="80px" alt=""></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="header_collapse">
                 <ul class="nav navbar-nav navbar_menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="<?= base_url() .'main/'?>">Home</a></li>
                     <li><a href="#about-us-link">About</a></li>
-                    <li
+                    <li class="desktop"
                     onmouseleave="closeNav()"
                     ><a href="#" onmouseover="openNav()">Projects</a>
                     
@@ -68,21 +68,34 @@
                                 <h3>Our Projects</h3>
                                 <br>
                                 <br>
-                              <a href="rooms.html">Bandar Sunway<br>
+                              <a href="<?= base_url() .'main/rooms'?>">Bandar Sunway<br>
                                   <span class="city">Subang Jaya</span>
                               </a>
                               <br><br>
-                              <a href="rooms.html">Glenmarie
+                              <a href="<?= base_url() .'main/rooms'?>">Glenmarie
                                   <br><span class="city">Shah Alam</span>
                               </a>
                             </div>
                           </div>
                     </li> 
+                    <li class="dropdown mobile">
+                        <a href="#mobileProjectMenu" data-toggle="collapse">Projects <span class="caret"></span></a>
+                        <ul id="mobileProjectMenu" class="collapse">
+                            <li>
+                                <a href="<?= base_url() .'main/rooms'?>"><small>Bandar Sunway</small>
+                              </a>
+                            </li>
+                            <li>
+                                <a href="<?= base_url() .'main/rooms'?>"><small>Glenmarie</small>
+                              </a>
+                            </li>
+                        </ul>
+                    </li>
                    
-                    <li><a href="index.html#contact-link">Contact Us</a></li>  
+                    <li><a href="<?= base_url() .'main/'?>#contact-link">Contact Us</a></li>  
                    
                 </ul> 
-                <ul class="nav navbar-nav navbar_menu pull-right">
+                <ul class="nav navbar-nav navbar_menu pull-right social_link">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>  
                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>  

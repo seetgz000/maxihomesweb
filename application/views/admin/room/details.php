@@ -87,9 +87,9 @@
                         <label>Tag Name</label>
                         <div id="tags">
                             <?php $i = 0; foreach($room['tag'] as $row){ ?>
-                                <br class="input_<?= $i; ?>">
-                                <div style="width:70%;display:inline-block;" class="input_<?= $i; ?>"><?= $row['tag_name']; ?></div>
-                                <br class="input_<?= $i; ?>">
+                                <br class="tag_<?= $i; ?>">
+                                <div style="width:70%;display:inline-block;" class="tag_<?= $i; ?>"><?= $row['tag_name']; ?></div>
+                                <br class="tag_<?= $i; ?>">
                             <?php $i++; } ?>
                         </div>
                       

@@ -53,7 +53,7 @@
                  <br><br>
                     <div id="multi_slider" class="owl-carousel  owl-theme">
                         <?php foreach($about_slider as $row){ ?>
-                            <a href="<?= base_url() . $row['link'] ?>">
+                            <a href="<?= base_url() .'main/'. $row['link'] ?>">
                             <div class="item slider_gallery_item">
                                 <img src="<?= base_url() . $row['thumbnail'] ?>">
                                 <div class="overlay">
@@ -123,54 +123,35 @@
         <h2 class="title">
             Find A Room Today
         </h2>
-        <div class="row project_row">
-            <div class="col-md-1"></div>
-            <div class="col-md-5 noPad ">
-                <img src="images/g-2.png" class="full_width">
-            </div>
-            <div class="col-md-5">
-                <h3>Bandar Sunway</h3>
-                <p>
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                        
-                        
-                </p>
-                <br><br>
-                <a class="rooms btn_custom white" href="rooms.html">View Rooms</a>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
-        
-        <div class="row project_row">
-            
-        <div class="col-md-1"></div>
-        <div class="col-md-5 noPad ">
-                <img src="images/g-1.png" class="full_width">
-            </div>
-                <div class="col-md-5">
-                    <h3>Glenmarie Shah Alam</h3>
-                    <p>
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                            
-                            
-                    </p>
-                    <br><br>
-                    <a class="rooms btn_custom white" href="rooms.html">View Rooms</a>
+        <div class="container-fluid">
+            <?php foreach($location as $row) { ?>
+                <div class="row project_row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 noPad ">
+                        <img src="<?= base_url() . $row['thumbnail'] ?>" class="full_width">
+                    </div>
+                    <div class="col-md-5">
+                        <h3><?= $row['name'] ?></h3>
+                        <p><?= $row['description'] ?></p>
+                        <br><br>
+                        <a class="rooms btn_custom white" href="rooms.html">View Rooms</a>
+                    </div>
+                    <div class="col-md-1"></div>
                 </div>
-                <div class="col-md-1"></div>
-            </div>
+            <?php } ?>
+        </div>
             
     </section>
     <!-- End latest Project area --> 
  
      <!-- Contact area --> 
     <section class="news" id="contact-link">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row contact_row">
                 <div class="col-sm-12 send_message">
                     <h2>Can't find what you are looking for ?</h2>
                     <p>Drop by our office today</p> 
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.097741263127!2d101.5998893151015!3d3.068548354497751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4c8f2e63151d%3A0xfbdf9e70b8572d54!2sRock+Cafe!5e0!3m2!1sen!2smy!4v1514704193615" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.097741263127!2d101.5998893151015!3d3.068548354497751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4c8f2e63151d%3A0xfbdf9e70b8572d54!2sRock+Cafe!5e0!3m2!1sen!2smy!4v1514704193615" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 
             </div>

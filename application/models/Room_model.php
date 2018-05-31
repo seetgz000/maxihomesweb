@@ -46,6 +46,20 @@ class Room_model extends CI_Model{
 
     }
 
+    public function get_tag($where) {
+
+        $room = $this->db->get_where("room",$where)->result_array();
+
+        for($i = 0; $i < count($room); $i++){
+            $tag = $this->db->get_where("tag",array(
+                "room_id" => $room[$i]['room_id']
+            ))->result_array();
+            $room[$i]['tag'] = $tag;
+        }
+
+        return $room;
+    }
+
     function edit($room_id,$data){
         $this->db->where("room_id",$room_id);
         $this->db->update("room",$data);

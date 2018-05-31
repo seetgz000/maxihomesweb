@@ -83,8 +83,8 @@
                             <input type='text' name='building_type' class='form-control' placeholder="Building Type" value="<?= $room["building_type"] ?>" required/>
                             <label>Availability</label>
                             <select class="form-control" name="availability">
-                                <option value = 0 <?= $room["availability"] == 0 ? "selected" : ""; ?>>Yes</option>
-                                <option value = 1 <?= $room["availability"] == 1 ? "selected" : ""; ?>>No</option>
+                                <option value = 0 <?= $room["availability"] == 0 ? "selected" : ""; ?>>Available Now</option>
+                                <option value = 1 <?= $room["availability"] == 1 ? "selected" : ""; ?>>Not Available</option>
                             </select>
                             <label>Minimum Tenure</label>
                             <input type='text' name='minimum_tenure' class='form-control' placeholder="Minimum Tenure" value="<?= $room['minimum_tenure'] ?>" required/>

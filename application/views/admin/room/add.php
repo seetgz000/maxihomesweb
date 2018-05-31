@@ -83,8 +83,8 @@
                             <input type='text' name='building_type' class='form-control' placeholder="Building Type" required/>
                             <label>Availability</label>
                             <select class="form-control" name="availability">
-                                <option value = 0 >Yes</option>
-                                <option value = 1 >No</option>
+                                <option value = 0 >Available Now</option>
+                                <option value = 1 >Not Available</option>
                             </select>
                             <label>Minimum Tenure</label>
                             <input type='text' name='minimum_tenure' class='form-control' placeholder="Minimum Tenure" required/>

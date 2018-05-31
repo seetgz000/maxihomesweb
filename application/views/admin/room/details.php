@@ -57,9 +57,9 @@
                             <h5>Availability: 
                                 <?php
                                 if($room['availability'] == 0){
-                                    echo "Yes";
+                                    echo "Available Now";
                                 }else{
-                                    echo "No";} ?>
+                                    echo "Not Available";} ?>
                             </h5>
                             <h5>Minimum Tenure: <?= $room["minimum_tenure"] ?></h5>
                             <h5>Furnishing: <?= $room["furnishing"] ?></h5>

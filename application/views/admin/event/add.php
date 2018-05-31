@@ -36,8 +36,8 @@
                         <hr />
                         <label>Event Title</label>
                         <input type='text' name='title' class='form-control' placeholder="Event Title" required/>
-                         <label>Event Description</label>
-                         <hr>
+                        <label>Event Description</label>
+                        <hr>
                         <textarea class="form-control" rows="10" required name="description" placeholder="Event Description" id="textarea"></textarea>
                         <br />
                         <input type="submit" value="save" class="btn btn-primary" style="margin-bottom:5%;margin-left:95%;">

@@ -21,6 +21,9 @@
                 </div>
                 <hr/>
                 <div class="box-body">
+                    <div class="location-thumbnail-container">
+                        <img class="thumbnail img-responsive" src="<?= base_url() . $location['thumbnail'] ?>">
+                    </div>
                     <table class="formTable">
                         <tr>
                             <th>Location Name</th>
@@ -32,6 +35,12 @@
                             <th>Location Address</th>
                             <td> 
                                 : <?= $location["address"] ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Location Description:</th>
+                            <td> 
+                                <p class="prewrap"><?=$location["description"]?></p>
                             </td>
                         </tr>
                     </table>

@@ -142,6 +142,10 @@
     color: #f0ff81!important;
 }
 
+#myNav {
+    overflow: hidden;
+}
+
 @media (max-width: 767px) {
     #myNav {
         display: none;

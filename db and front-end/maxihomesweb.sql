@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2018 at 02:09 PM
+-- Generation Time: Jun 01, 2018 at 04:10 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -40,7 +40,11 @@ CREATE TABLE `about_slider` (
 --
 
 INSERT INTO `about_slider` (`about_slider_id`, `title`, `thumbnail`, `link`) VALUES
-(1, 'etest', '/images/slider/property-mgmt.jpg', 'asdasd');
+(2, 'Bandar Sunway', '/images/slider/slide_1.jpg', 'rooms'),
+(3, 'Glenmarie', '/images/slider/slide_2.jpg', 'rooms'),
+(4, 'Bandar Sunway', '/images/slider/slide_3.jpg', 'rooms'),
+(5, 'Glenmarie', '/images/slider/slide_4.jpg', 'rooms'),
+(6, 'Bandar Sunway', '/images/slider/slide_5.jpg', 'rooms');
 
 -- --------------------------------------------------------
 
@@ -66,8 +70,6 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`admin_id`, `role_id`, `username`, `password`, `salt`, `deleted`, `token`, `email`, `contact`) VALUES
 (3, 1, 'cyyang', '27f501a09a16885bd6440acbf13ddeee35d64883f76c8e99c386e0acc8fc87d4', 592691, 0, 'dabs57p6ih', 'cyyang94@hotmail.com', '+60167780275'),
-(4, 1, 'rob', 'cbc4551a758cf172cde258bb438585ae3edb9842df01877412cc17bf477cb537', 996509, 0, '', 'robxlee@hotmail.com', '123'),
-(8, 1, 'ukbadmin', 'cbb6412a1b8db615de60ee4beaea5cbdd97b6319f885caf325d5af7f2ae7e8c4', 115657, 0, '', 'willen.wong@grownce.com', '+60127201755'),
 (9, 1, 'Seet', 'e6d69d2d7f334e990309e3a320e34be041a4468f43b6fa5fbde788fade1dc756', 495361, 0, '', 'sgz@asd', '000');
 
 -- --------------------------------------------------------
@@ -109,8 +111,9 @@ CREATE TABLE `event` (
 --
 
 INSERT INTO `event` (`event_id`, `title`, `description`, `thumbnail`) VALUES
-(1, 'test asdasdas', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id auctor arcu. In commodo, sem ac elementum tempus, eros sapien hendrerit turpis, id blandit nunc mi sollicitudin felis. Aenean at ipsum at libero interdum hendrerit. Vestibulum id nisl eu felis luctus dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur vel ornare leo. Nunc rhoncus turpis et felis egestas sodales. Nam eros mauris, consequat ut porttitor at, fringilla quis magna. Vestibulum nisi dui, vulputate in venenatis at, tempor sed ipsum. In mollis eget nunc commodo commodo. Proin et nulla aliquam, eleifend lectus sed, pellentesque elit. Vivamus porttitor condimentum ipsum, sed convallis tellus. Nulla ut quam pulvinar, tempus justo vitae, sagittis lectus. Maecenas ac consectetur dolor, ac varius ex. Phasellus pharetra, tortor a mattis congue, ipsum elit dictum ligula, ut fringilla nunc mauris et odio.\r\n\r\nIn porta, orci a bibendum porta, mi dolor sollicitudin felis, vel bibendum dui diam blandit felis. Phasellus at porta leo. Phasellus scelerisque mi ac velit ultricies, cursus eleifend tellus ultricies. Sed fermentum eget leo id accumsan. Proin feugiat justo eu dapibus condimentum. Morbi viverra efficitur eleifend. Aenean velit mauris, faucibus et felis vitae, tempus semper eros. Suspendisse quis tincidunt sem. Quisque ut risus sagittis, convallis nibh non, varius leo. Praesent malesuada vitae ipsum et rhoncus. Aenean aliquet tortor magna, imperdiet consectetur enim lacinia non. Duis ornare urna sit amet nulla pellentesque rhoncus. Quisque tempor mollis turpis, id venenatis urna tincidunt eget.\r\n\r\nDuis sodales ex ac augue sagittis bibendum nec non lectus. Ut blandit ornare eros, et hendrerit erat ultricies eget. In vel sem eu odio imperdiet varius quis at elit. Duis varius sodales maximus. Nam quis arcu blandit, tincidunt lacus non, commodo leo. Duis dignissim tincidunt ex nec euismod. Sed placerat metus nunc. Praesent augue sapien, mollis sed bibendum in, tincidunt non mi. Praesent venenatis aliquet sodales. Duis imperdiet magna eget odio pharetra, sit amet convallis dolor iaculis. Praesent tempor libero velit, sed gravida velit pellentesque et. In hac habitasse platea dictumst.', '/images/event/38268056.png'),
-(3, 'AS', 'ASasASasasdas', '/images/event/bandar_sunway.jpg');
+(4, 'Rated Number 1 Choice by Sunway Students', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"', '/images/event/sunway.jpg'),
+(5, 'Grand Opening in Mont Kiara', 'We are expanding ! \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"', '/images/event/ribbon.jpg'),
+(6, 'How to find the most suitable accommodation for you', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"', '/images/event/prop.jpg');
 
 -- --------------------------------------------------------
 
@@ -121,16 +124,18 @@ INSERT INTO `event` (`event_id`, `title`, `description`, `thumbnail`) VALUES
 CREATE TABLE `location` (
   `location_id` int(128) NOT NULL,
   `name` varchar(32) NOT NULL,
-  `address` varchar(32) NOT NULL
+  `address` varchar(32) NOT NULL,
+  `description` longtext NOT NULL,
+  `thumbnail` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `location`
 --
 
-INSERT INTO `location` (`location_id`, `name`, `address`) VALUES
-(4, 'Bandar Sunway', 'Subang Jaya'),
-(5, 'Glenmarie', 'Shah Alam');
+INSERT INTO `location` (`location_id`, `name`, `address`, `description`, `thumbnail`) VALUES
+(4, 'Bandar Sunway', 'Subang Jaya', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus sapien ac nisl porttitor ultrices. Ut tempor condimentum bibendum. Duis maximus enim vitae velit mollis malesuada. Integer convallis malesuada tellus, sit amet sodales nibh commodo vel. Aliquam volutpat felis et urna lacinia porta. Etiam eu libero purus. Nunc porttitor congue risus condimentum rutrum. Donec convallis pharetra aliquam. Sed non eros lacinia, finibus mi pretium, tempus nibh. Sed gravida lectus vulputate ex egestas pharetra. Sed quis nisi ullamcorper, placerat mauris at, gravida lacus.', '/images/location/g-2.png'),
+(5, 'Glenmarie', 'Shah Alam', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus sapien ac nisl porttitor ultrices. Ut tempor condimentum bibendum. Duis maximus enim vitae velit mollis malesuada. Integer convallis malesuada tellus, sit amet sodales nibh commodo vel. Aliquam volutpat felis et urna lacinia porta. Etiam eu libero purus. Nunc porttitor congue risus condimentum rutrum. Donec convallis pharetra aliquam. Sed non eros lacinia, finibus mi pretium, tempus nibh. Sed gravida lectus vulputate ex egestas pharetra. Sed quis nisi ullamcorper, placerat mauris at, gravida lacus.', '/images/location/g-1.png');
 
 -- --------------------------------------------------------
 
@@ -145,7 +150,7 @@ CREATE TABLE `rental_condition` (
   `attached_bathroom` tinyint(1) NOT NULL,
   `building_type` varchar(32) NOT NULL,
   `availability` tinyint(1) NOT NULL,
-  `minimum_tenure` date NOT NULL,
+  `minimum_tenure` varchar(128) NOT NULL,
   `furnishing` varchar(32) NOT NULL,
   `beds_in_room` int(2) NOT NULL,
   `gender_preference` varchar(32) NOT NULL
@@ -156,8 +161,7 @@ CREATE TABLE `rental_condition` (
 --
 
 INSERT INTO `rental_condition` (`rental_condition_id`, `room_id`, `rental_type`, `attached_bathroom`, `building_type`, `availability`, `minimum_tenure`, `furnishing`, `beds_in_room`, `gender_preference`) VALUES
-(1, 1, 'xcvxc', 0, 'xcv', 0, '0000-00-00', 'xcv', 4, 'Boys'),
-(2, 2, 'xcvxc', 1, 'xcvxcv', 1, '1212-12-12', '2fvdv', 4, 'Boys & Girls');
+(2, 2, 'Private Room', 1, 'Condominium', 0, '6 months', 'Fully Furnished', 1, 'Boys');
 
 -- --------------------------------------------------------
 
@@ -179,8 +183,7 @@ CREATE TABLE `room` (
 --
 
 INSERT INTO `room` (`room_id`, `name`, `description`, `address`, `thumbnail`, `location_id`) VALUES
-(1, 'xcvcxv', 'xcvxcv', 'xcv', '/images/room/a.JPG', 4),
-(2, 'sadasd', 'asd', 'asd', '/images/room/slide_2.jpg', 5);
+(2, 'Jalan PJS 9/12 Single Room', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"', ' 2, jalan pjs 11 ', '/images/room/g-4.JPG', 4);
 
 -- --------------------------------------------------------
 
@@ -202,8 +205,7 @@ CREATE TABLE `room_price` (
 --
 
 INSERT INTO `room_price` (`room_price_id`, `room_id`, `advance_rental`, `security_deposit`, `utilities_deposit`, `keycard_deposit`) VALUES
-(1, 1, '4234', '234', '234', '234.00'),
-(2, 2, '111', '111', '111', '111.00');
+(2, 2, '500', '1000', '250', '50.00');
 
 -- --------------------------------------------------------
 
@@ -222,10 +224,9 @@ CREATE TABLE `tag` (
 --
 
 INSERT INTO `tag` (`tag_id`, `room_id`, `tag_name`) VALUES
-(1, 1, 'dfdsf'),
-(10, 2, 'dasd'),
-(11, 2, 'sdasd'),
-(12, 2, 'asdasd');
+(6, 2, 'Single room with Attached Bathroom'),
+(7, 2, 'test tag 1'),
+(8, 2, 'test tag 2');
 
 --
 -- Indexes for dumped tables
@@ -299,7 +300,7 @@ ALTER TABLE `tag`
 -- AUTO_INCREMENT for table `about_slider`
 --
 ALTER TABLE `about_slider`
-  MODIFY `about_slider_id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `about_slider_id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `admin`
@@ -317,7 +318,7 @@ ALTER TABLE `admin_role`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `event_id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `event_id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `location`
@@ -347,17 +348,35 @@ ALTER TABLE `room_price`
 -- AUTO_INCREMENT for table `tag`
 --
 ALTER TABLE `tag`
-  MODIFY `tag_id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `tag_id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
 --
 
 --
+-- Constraints for table `rental_condition`
+--
+ALTER TABLE `rental_condition`
+  ADD CONSTRAINT `rental_condition_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `room` (`room_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `room`
 --
 ALTER TABLE `room`
-  ADD CONSTRAINT `room_ibfk_1` FOREIGN KEY (`location_id`) REFERENCES `location` (`location_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `room_ibfk_1` FOREIGN KEY (`location_id`) REFERENCES `location` (`location_id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `room_price`
+--
+ALTER TABLE `room_price`
+  ADD CONSTRAINT `room_price_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `room` (`room_id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `tag`
+--
+ALTER TABLE `tag`
+  ADD CONSTRAINT `tag_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `room` (`room_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

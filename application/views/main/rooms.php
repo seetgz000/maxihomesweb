@@ -1,7 +1,12 @@
-<section class="filler filler_sunway full">
+<section class="filler full 
+    <?php if ( $room[0]['location'] == "Glenmarie"){
+        echo 'filler_glenmarie';
+    } else {
+        echo 'filler_sunway';
+    } ?>">
     <div class="overlay">
         <div class="text">
-            <h1>Bandar Sunway</h1>
+            <h1><?= $room[0]['location'] ?></h1>
         </div>
     </div>
 </section>

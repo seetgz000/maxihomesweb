@@ -20,8 +20,6 @@
                             <tr>
                                 <th>No.</th>
                                 <th>Title</th>
-                                <th>Link</th>
-                                <th>Thumbnail</th>
 
                                 <th></th>
                             </tr>
@@ -34,8 +32,6 @@
                                 <tr>
                                     <td><a href="<?=base_url()?>AboutSlider/details/<?=$row["about_slider_id"]?>"><?= $i ?></a></td>
                                     <td><a href="<?=base_url()?>AboutSlider/details/<?=$row["about_slider_id"]?>"><?= $row["title"] ?></a></td>
-                                    <td><a href="<?=base_url()?>AboutSlider/details/<?=$row["about_slider_id"]?>"><?= $row["link"] ?></a></td>
-                                    <td><a href="<?=base_url()?>AboutSlider/details/<?=$row["about_slider_id"]?>"><?= $row["thumbnail"] ?></a></td>
                                     <td><a class="btn btn-danger" href="<?= base_url(); ?>AboutSlider/delete/<?= $row['about_slider_id']; ?>">delete</a>
                             </td>
                                 </tr>

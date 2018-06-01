@@ -7,11 +7,11 @@ class Event extends CI_Controller {
     function __construct() {
         parent::__construct();
 
-        // if($this->session->userdata("user_type") != 'admin'){
+        if($this->session->userdata("user_type") != 'admin'){
 
     
-        //     redirect("Access/logout",'refresh');
-        // }
+            redirect("Access/logout",'refresh');
+        }
 
         $this->load->model("Access_model");
         $this->load->model("Event_model");      
@@ -55,8 +55,9 @@ class Event extends CI_Controller {
         $data = array();
         if ($_POST) {
             $config = array(
-                "allowed_types" => "*",
-                "upload_path" => "./images/event/"
+                "allowed_types" => "gif|png|jpg|jpeg",
+                "upload_path" => "./images/event/",
+                "path" => "/images/event/"
             );
             $this->load->library("upload",$config);
             $this->load->model("Event_model");
@@ -68,7 +69,7 @@ class Event extends CI_Controller {
 
             if(!empty($_FILES['thumbnail']['name'])){
                 if($this->upload->do_upload("thumbnail")){
-                    $data['thumbnail'] = "/images/event/".$this->upload->data()['file_name'];
+                    $data['thumbnail'] = $config['path'].$this->upload->data()['file_name'];
 
                     $this->Event_model->add($data);
                     redirect("Event/all",'redirect');
@@ -97,8 +98,9 @@ class Event extends CI_Controller {
         $data = array();
         if ($_POST) {
             $config = array(
-                "allowed_types" => "*",
-                "upload_path" => "./images/event/"
+                "allowed_types" => "gif|png|jpg|jpeg",
+                "upload_path" => "./images/event/",
+                "path" => "/images/event/"
             );
             $this->load->library("upload",$config);
             
@@ -111,7 +113,7 @@ class Event extends CI_Controller {
 
             if(!empty($_FILES['thumbnail']['name'])){
                 if($this->upload->do_upload("thumbnail")){
-                    $data['thumbnail'] = "/images/event/".$this->upload->data()['file_name'];
+                    $data['thumbnail'] = $config['path'].$this->upload->data()['file_name'];
 
                     $this->Event_model->edit($event_id,$data);
                     redirect("Event/all",'redirect');

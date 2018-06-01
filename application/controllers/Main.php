@@ -18,15 +18,24 @@ class Main extends CI_Controller {
         $this->page_data["event"] = $this->Event_model->get_all();
         $this->page_data["location"] = $this->Location_model->get_all();
 
-        $this->load->view("main/header");
+        $this->load->view("main/header", $this->page_data);
         $this->load->view("main/index" , $this->page_data);
         $this->load->view("main/footer");
     }
-    function rooms(){
-        $this->page_data["location"] = $this->Location_model->get_all();
-        $this->page_data["room"] = $this->Room_model->get_all();
+    function rooms($location_id){
+        $room = $this->Room_model->get_where(array(
+            "room.location_id" => $location_id
+        ));
 
-        $this->load->view("main/header");
+        if (!count($room)) {
+            die("404");
+        }
+
+
+        $this->page_data["location"] = $this->Location_model->get_all();
+        $this->page_data['room'] = $room;
+
+        $this->load->view("main/header", $this->page_data);
         $this->load->view("main/rooms" , $this->page_data);
         $this->load->view("main/footer");
     }
@@ -38,10 +47,10 @@ class Main extends CI_Controller {
         if (!count($room)) {
             die("404");
         }
-
+        $this->page_data["location"] = $this->Location_model->get_all();
         $this->page_data['room'] = $room[0];
 
-        $this->load->view("main/header");
+        $this->load->view("main/header", $this->page_data);
         $this->load->view("main/room_details" , $this->page_data);
         $this->load->view("main/footer");
     }

@@ -55,7 +55,7 @@
 }
 
 .filler{
-    width : 100vw;
+    width : 100%;
     height : 30vh;
     background-attachment: fixed;
     position: relative;
@@ -66,7 +66,12 @@
 }
 
 .filler_sunway{
-    background-image : url('../images/bandar_sunway.jpg');
+    background: url('../images/bandar_sunway.jpg') no-repeat center;
+    background-size: cover;
+}
+.filler_glenmarie{
+    background: url('../images/condo.jpg') no-repeat center;
+    background-size: cover;
 }
 .filler.full{
     height : 80vh;
@@ -161,6 +166,9 @@
     }
     .social_link li {
         display: inline-block;
+    }
+    #mobileProjectMenu > li > a {
+        display: block;
     }
 }
 

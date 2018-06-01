@@ -7,13 +7,14 @@ class AboutSlider extends CI_Controller {
     function __construct() {
         parent::__construct();
 
-        // if($this->session->userdata("user_type") != 'admin'){
+        if($this->session->userdata("user_type") != 'admin'){
 
     
-        //     redirect("Access/logout",'refresh');
-        // }
+            redirect("Access/logout",'refresh');
+        }
 
         $this->load->model("Access_model");
+        $this->load->model("Location_model");
         $this->load->model("AboutSlider_model");
     }
 
@@ -51,24 +52,27 @@ class AboutSlider extends CI_Controller {
     function add() {
 
       
-        $page_data = array();
+        $page_data = array(
+            'location' => $this->Location_model->get_all()
+        );
         $data = array();
         if ($_POST) {
             $config = array(
-                "allowed_types" => "*",
-                "upload_path" => "./images/slider/"
+                "allowed_types" => "gif|png|jpg|jpeg",
+                "upload_path" => "./images/slider/",
+                "path" => "/images/slider/"
             );
             $this->load->library("upload",$config);
             $this->load->model("AboutSlider_model");
 
             $data = array(
                 'title' => $this->input->post('title'),
-                "link" => $this->input->post("link")
+                "location_id" => $this->input->post("about_slider_location")
             );
 
             if(!empty($_FILES['thumbnail']['name'])){
                 if($this->upload->do_upload("thumbnail")){
-                    $data['thumbnail'] = "/images/slider/".$this->upload->data()['file_name'];
+                    $data['thumbnail'] = $config['path'].$this->upload->data()['file_name'];
 
                     $this->AboutSlider_model->add($data);
                     redirect("AboutSlider/all",'redirect');
@@ -90,6 +94,7 @@ class AboutSlider extends CI_Controller {
     function edit($about_slider_id) {
         $this->load->model("AboutSlider_model");
         $page_data = array(
+            'location' => $this->Location_model->get_all(),
             'about_slider' => $this->AboutSlider_model->get_where(array(
                 'about_slider_id' => $about_slider_id
             ))[0]
@@ -97,21 +102,22 @@ class AboutSlider extends CI_Controller {
         $data = array();
         if ($_POST) {
             $config = array(
-                "allowed_types" => "*",
-                "upload_path" => "./images/slider/"
+                "allowed_types" => "gif|png|jpg|jpeg",
+                "upload_path" => "./images/slider/",
+                "path" => "/images/slider/"
             );
             $this->load->library("upload",$config);
             
 
             $data = array(
                 "title" => $this->input->post("title"),
-                "link" => $this->input->post("link")
+                "location_id" => $this->input->post("about_slider_location")
             );
             $this->AboutSlider_model->edit($about_slider_id,$data);
 
             if(!empty($_FILES['thumbnail']['name'])){
                 if($this->upload->do_upload("thumbnail")){
-                    $data['thumbnail'] = "/images/slider/".$this->upload->data()['file_name'];
+                    $data['thumbnail'] = $config['path'].$this->upload->data()['file_name'];
 
                     $this->AboutSlider_model->edit($about_slider_id,$data);
                     redirect("AboutSlider/all",'redirect');

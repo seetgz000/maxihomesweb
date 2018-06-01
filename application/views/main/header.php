@@ -68,27 +68,27 @@
                                 <h3>Our Projects</h3>
                                 <br>
                                 <br>
-                              <a href="<?= base_url() .'main/rooms'?>">Bandar Sunway<br>
-                                  <span class="city">Subang Jaya</span>
-                              </a>
-                              <br><br>
-                              <a href="<?= base_url() .'main/rooms'?>">Glenmarie
-                                  <br><span class="city">Shah Alam</span>
-                              </a>
+
+                                <?php foreach ($location as $row) { ?>
+                                    <a href="<?= base_url() ?>main/rooms/<?= $row["location_id"] ?>"><?= $row['name'] ?><br>
+                                        <span class="city"><?= $row['address'] ?></span>
+                                    </a>
+                                    <br><br>
+                                <?php } ?>
+                              
                             </div>
                           </div>
                     </li> 
                     <li class="dropdown mobile">
                         <a href="#mobileProjectMenu" data-toggle="collapse">Projects <span class="caret"></span></a>
                         <ul id="mobileProjectMenu" class="collapse">
+
+                            <?php foreach ($location as $row) { ?>
                             <li>
-                                <a href="<?= base_url() .'main/rooms'?>"><small>Bandar Sunway</small>
+                                <a href="<?= base_url() ?>main/rooms/<?= $row["location_id"] ?>"><small><?= $row['name'] ?></small>
                               </a>
                             </li>
-                            <li>
-                                <a href="<?= base_url() .'main/rooms'?>"><small>Glenmarie</small>
-                              </a>
-                            </li>
+                            <?php } ?>
                         </ul>
                     </li>
                    

@@ -24,7 +24,7 @@
                             <img class="thumbnail img-responsive" src="<?= base_url() . $about_slider['thumbnail'] ?>">
                         </div>
                         <h5>Title : <?= $about_slider["title"] ?></h5>
-                        <h5>Link : <?= $about_slider["link"] ?></h5>
+                        <h5>Location : <?= $about_slider["location"] ?></h5>
                         <hr/>
                     </div>
                 </div>

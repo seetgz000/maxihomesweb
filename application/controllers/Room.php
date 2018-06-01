@@ -7,11 +7,11 @@ class Room extends CI_Controller {
     function __construct() {
         parent::__construct();
 
-        // if($this->session->userdata("user_type") != 'admin'){
+        if($this->session->userdata("user_type") != 'admin'){
 
     
-        //     redirect("Access/logout",'refresh');
-        // }
+            redirect("Access/logout",'refresh');
+        }
 
         $this->load->model("Access_model");
         $this->load->model("Room_model");      
@@ -58,8 +58,9 @@ class Room extends CI_Controller {
         $data = array();
         if ($_POST) {
             $config = array(
-                "allowed_types" => "*",
-                "upload_path" => "./images/room/"
+                "allowed_types" => "gif|png|jpg|jpeg",
+                "upload_path" => "./images/room/",
+                "path" => "/images/room/"
             );
             $this->load->library("upload",$config);
 
@@ -72,7 +73,7 @@ class Room extends CI_Controller {
             
             if(!empty($_FILES['thumbnail']['name'])){
                 if($this->upload->do_upload("thumbnail")){
-                    $data['thumbnail'] = "/images/room/".$this->upload->data()['file_name'];
+                    $data['thumbnail'] = $config['path'].$this->upload->data()['file_name'];
 
                     
                     $room_id = $this->Room_model->add($data);
@@ -127,8 +128,9 @@ class Room extends CI_Controller {
         $data = array();
         if ($_POST) {
             $config = array(
-                "allowed_types" => "*",
-                "upload_path" => "./images/room/"
+                "allowed_types" => "gif|png|jpg|jpeg",
+                "upload_path" => "./images/room/",
+                "path" => "/images/room/"
             );
             $this->load->library("upload",$config);
             
@@ -166,7 +168,7 @@ class Room extends CI_Controller {
 
             if(!empty($_FILES['thumbnail']['name'])){
                 if($this->upload->do_upload("thumbnail")){
-                    $data['thumbnail'] = "/images/room/".$this->upload->data()['file_name'];
+                    $data['thumbnail'] = $config['path'].$this->upload->data()['file_name'];
 
                     $this->Room_model->edit($data);
                     redirect("Room/all",'redirect');

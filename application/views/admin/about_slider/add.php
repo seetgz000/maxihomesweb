@@ -36,8 +36,16 @@
                         <hr />
                         <label>About Slider Title</label>
                         <input type='text' name='title' class='form-control' placeholder="About Slider Title" required/>
-                        <label>About Slider Link</label>
-                        <input type='text' name='link' class='form-control' placeholder="About Slider Link" required/>
+                        <label>About Slider Location</label>
+                        <select class="form-control" name="about_slider_location">
+                                <?php
+                                foreach ($location as $row) {
+                                    ?>
+                                    <option value="<?= $row["location_id"] ?>"><?= $row["name"] ?></option>
+                                    <?php
+                                }
+                                ?>
+                        </select>
                         <br />
                         <input type="submit" value="save" class="btn btn-primary" style="margin-bottom:5%;margin-left:95%;">
                         <br />

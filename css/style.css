@@ -2231,15 +2231,15 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 .overlay {
   height: 0px;
   width: 100vw;
-  top : 70px;
+  top: 70px;
   position: absolute;
   z-index: 2;
-  left: -24vw;
+  left: -273%;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
-  padding-left : 10vw;
+  padding-left: 40%;;
 
 }
 
@@ -2287,10 +2287,6 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 
 .about_mission{
   padding : 2vw;
-}
-
-.about_mission h4{
-  
 }
 
 .projects{

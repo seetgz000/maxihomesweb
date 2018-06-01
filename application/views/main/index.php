@@ -53,7 +53,7 @@
                  <br><br>
                     <div id="multi_slider" class="owl-carousel  owl-theme">
                         <?php foreach($about_slider as $row){ ?>
-                            <a href="<?= base_url() .'main/'. $row['link'] ?>">
+                            <a href="<?= base_url() .'main/rooms/'. $row['location_id'] ?>">
                             <div class="item slider_gallery_item">
                                 <img src="<?= base_url() . $row['thumbnail'] ?>">
                                 <div class="overlay">
@@ -134,7 +134,7 @@
                         <h3><?= $row['name'] ?></h3>
                         <p><?= $row['description'] ?></p>
                         <br><br>
-                        <a class="rooms btn_custom white" href="rooms.html">View Rooms</a>
+                        <a class="rooms btn_custom white" href="<?= base_url() ?>main/rooms/<?= $row["location_id"] ?>">View Rooms</a>
                     </div>
                     <div class="col-md-1"></div>
                 </div>

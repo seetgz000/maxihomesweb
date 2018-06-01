@@ -3,8 +3,11 @@
 class AboutSlider_model extends CI_Model{
 
     function get_all(){
-        $this->db->select('*');
+        $this->db->select('about_slider.*,
+                            location.name as location');
         $this->db->from('about_slider');
+        $this->db->join('location', 'about_slider.location_id = location.location_id');
+        $this->db->order_by('about_slider_id', 'ASC');
 
         $query = $this->db->get();
 
@@ -16,9 +19,12 @@ class AboutSlider_model extends CI_Model{
     }
 
     public function get_where($where) {
-        $this->db->select('*');
+        $this->db->select('about_slider.*,
+                            location.name as location');
         $this->db->from('about_slider');
+        $this->db->join('location', 'about_slider.location_id = location.location_id');
         $this->db->where($where);
+        $this->db->order_by('about_slider_id', 'ASC');
 
         $query = $this->db->get();
 
